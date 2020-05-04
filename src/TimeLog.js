@@ -1,50 +1,77 @@
-import React from 'react';
+import React from 'react'
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
 
-class TimeLog extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            year: '',
-            month: '',
-            day: '',
-            hour: '',
-            min: '',
-            second: '',
-            midday: ''
-        }
-    }
 
-    componentDidMount() {
-        setInterval(this.getCurrentTime, 1000);
-    }
+const columns = [
+  { id: "time in", label: "Time In", minWidth: 100 },
+  { id: "time out", label: "Time Out", minWidth: 100 },
+  {
+    id: "worked time",
+    label: "Worked Time (Hour)",
+    minWidth: 90,
+    align: "right",
+  }
+  
+];
 
-    numberConvert = (number) => number < 10 ? '0' + number : number
-   
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+    backgroundColor: '#e3f2fd'
+  },
+  container: {
+    maxHeight: 1400,
+  }
+});
 
-    getCurrentTime = () => {
-        let currentTime = new Date();
-        this.setState({
-            year: currentTime.getFullYear(),
-            month: currentTime.getMonth() + 1,
-            day: currentTime.getDate(),
-            hour: this.numberConvert(currentTime.getHours() > 12 ? currentTime.getHours() - 12 : currentTime.getHours()),
-            min: this.numberConvert(currentTime.getMinutes()),
-            second: this.numberConvert(currentTime.getSeconds()),
-            midday: currentTime.getHours() > 12 ? 'PM' : 'AM'
-        })
-    }
 
-render() {
-    return (
-        <div>
-            <div>{this.state.month}/{this.state.day}/{this.state.year}</div>
-            <div>{this.state.hour}:{this.state.min}:{this.state.second} {this.state.midday}</div>
-        </div>
-    )
+export default function StickyHeadTable(props) {
+  const classes = useStyles();
+
+  return (
+    <Paper className={classes.root}>
+      <TableContainer className={classes.container}>
+        <Table stickyHeader aria-label="sticky table">
+          <TableHead className={classes.container}>
+            <TableRow >
+              {columns.map(column => (
+                <TableCell
+                  key={column.id}
+                  align={column.align}
+                  style={{ minWidth: column.minWidth }}
+                >
+                  {column.label}
+                </TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+              {props.clockIn.map((item,index) =>
+                <TableRow>
+                    <TableCell>
+                        <p> {item.date} {item.time} </p>
+                    </TableCell>
+                    <TableCell>
+                        <p> {props.clockOut[index].date} {props.clockOut[index].time} </p>
+                    </TableCell>
+                    <TableCell>
+                        <p> {Math.round((props.clockOut[index].timeAtLogOut - item.timeAtLogIn)/1000/60/60).toFixed(2)} </p>
+                    </TableCell>
+                </TableRow>)
+              }
+          </TableBody>
+        </Table>
+      </TableContainer>
+    
+    </Paper>
+    
+  );
 }
 
-}
-
-
-
-export default TimeLog;

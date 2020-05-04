@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import TimeLog from './TimeLog'
-// import ClockIn from './ClockIn';
+import App from './App'
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <TimeLog />
-    {/* <ClockIn /> */}
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
