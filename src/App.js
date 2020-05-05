@@ -4,6 +4,7 @@ import ClockInOut from './ClockInOut';
 import TopBar from './TopBar'
 import TimeLog from './TimeLog'
 
+
 class App extends React.Component{
     state = {
         page: 0,
@@ -64,24 +65,25 @@ class App extends React.Component{
         return(
             <div>
                 <TopBar status={this.state.working} />
-                    {this.state.page === 0 ? <ClockInOut 
+                    {this.state.page === 0 ?
+                <ClockInOut 
                     clockIn={this.clockIn}
                     clockOut={this.clockOut}
                     date={this.state.date}
                     time={this.state.time}
                     working={this.state.working}
-                   
+                   clockInArray={this.state.clockIn}
 
-                /> : null  }
+                /> : null }
 
-                {this.state.page=== 1? 
+                {this.state.page=== 1 ? 
                 
                 <TimeLog 
                     clockIn={this.state.clockIn} 
                     clockOut={this.state.clockOut}
                     working={this.state.working}
                 
-                />: null}
+                /> : null }
 
                 <BottomBar
                     working={this.state.working}

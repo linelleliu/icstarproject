@@ -48,13 +48,14 @@ render() {
                 ? 
                 <h3>Welcome</h3>
                 :
-                 <h3>Clocked In  </h3>}
+                 <h3>Clocked In {this.props.clockInArray[this.props.clockInArray.length-1].time} </h3>}
                 
                 <div className='time-display'>{this.props.time}</div>
                 <div className='date-display'>{this.props.date}</div>
         
                 {this.props.working === false
                 ? 
+                
                     <Button onClick={this.props.clockIn} style={style} >
                         CLOCK IN
                     </Button>
