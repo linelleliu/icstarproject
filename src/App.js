@@ -1,7 +1,7 @@
 import React from 'react'
+import TopBar from './TopBar'
 import BottomBar from './BottomBar'
 import ClockInOut from './ClockInOut';
-import TopBar from './TopBar'
 import TimeLog from './TimeLog'
 
 
@@ -19,7 +19,6 @@ class App extends React.Component{
         setInterval(this.getCurrentTime, 1000);
     }
 
-   
     clockIn = () => {
         let startedMoment = {
             date: this.state.date,
@@ -34,7 +33,11 @@ class App extends React.Component{
             time:'',
             timeAtLogIn: ''
         })
-        this.setState({ clockIn: newArray, clockOut: newArray2, working: true})
+        this.setState({
+            clockIn: newArray,
+            clockOut: newArray2,
+            working: true
+        })
     }
 
     clockOut = () => {
@@ -46,26 +49,29 @@ class App extends React.Component{
         let newArray = this.state.clockOut
         newArray.pop();
         newArray.push(endedMoment)
-        this.setState({ clockOut: newArray, working: false})
-    }
+        this.setState({
+            clockOut: newArray, 
+            working: false
+        });
+    };
 
     getCurrentTime = () => {
         let currentTime = new Date();
         this.setState({
            date: currentTime.toLocaleDateString(),
            time: currentTime.toLocaleTimeString(),
-        })
-    }
+        });
+    };
 
     changePage =(number)=>{
         this.setState({page:number})
-    }
+    };
 
     render(){
         return(
             <div>
                 <TopBar status={this.state.working} />
-                    {this.state.page === 0 ?
+                {this.state.page === 0?
                 <ClockInOut 
                     clockIn={this.clockIn}
                     clockOut={this.clockOut}
@@ -73,17 +79,16 @@ class App extends React.Component{
                     time={this.state.time}
                     working={this.state.working}
                    clockInArray={this.state.clockIn}
-
-                /> : null }
+                /> 
+                : null }
 
                 {this.state.page=== 1 ? 
-                
                 <TimeLog 
                     clockIn={this.state.clockIn} 
                     clockOut={this.state.clockOut}
                     working={this.state.working}
-                
-                /> : null }
+                />
+                : null }
 
                 <BottomBar
                     working={this.state.working}
@@ -92,7 +97,7 @@ class App extends React.Component{
                 />
             </div>
         )
-    }
-}
+    };
+};
 
 export default App;

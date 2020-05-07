@@ -8,8 +8,28 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import clsx from 'clsx';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import SettingsIcon from '@material-ui/icons/Settings';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 
+const useStyles1 = makeStyles({
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  },
+});
 
 
 const useStyles = makeStyles((theme) => ({
@@ -43,15 +63,63 @@ const MenuAppBar = (props) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const classes1 = useStyles1();
+  const [state, setState] = React.useState({
+    top: false,
+  });
 
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <div
+      className={clsx(classes1.list, {
+        [classes1.fullList]: anchor === 'top' || anchor === 'bottom',
+      })}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Surveys', 'Location'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <LocationOnIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['Setting'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <SettingsIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
 
   return (
     <div className={classes.root} >
       
+        
       <AppBar position="static" >
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
+            {['left'].map((anchor) => (
+              <React.Fragment key={anchor}>
+                <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}> 
+                  {list(anchor)}
+                </Drawer>
+                <MenuIcon onClick={toggleDrawer(anchor, true)}/>
+              </React.Fragment>
+            ))}
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             {props.status === true ? "CLOCK OUT": "CLOCK IN"}
@@ -89,6 +157,7 @@ const MenuAppBar = (props) => {
           )}
         </Toolbar>
       </AppBar>
+ 
     </div>
   );
 }

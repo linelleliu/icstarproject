@@ -46,7 +46,7 @@ render() {
             <div className='clock'>
                 {this.props.working === false
                 ? 
-                <h3>Welcome</h3>
+                <h3>Welcome!</h3>
                 :
                  <h3>Clocked In {this.props.clockInArray[this.props.clockInArray.length-1].time} </h3>}
                 
@@ -55,8 +55,8 @@ render() {
         
                 {this.props.working === false
                 ? 
-                
-                    <Button onClick={this.props.clockIn} style={style} >
+
+                    <Button onClick={this.props.clockIn} style={style}>
                         CLOCK IN
                     </Button>
                 :
@@ -64,11 +64,7 @@ render() {
                         CLOCK OUT
                     </Button>
                 }
-
             </div>
-            
-            
-
         </div>
     )
 }
