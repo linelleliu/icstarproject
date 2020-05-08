@@ -38,8 +38,6 @@ class ClockInOut extends React.Component {
     //     }
     // }
 
-    
-
 render() {
     return (
         <div>
@@ -55,7 +53,6 @@ render() {
         
                 {this.props.working === false
                 ? 
-
                     <Button onClick={this.props.clockIn} style={style}>
                         CLOCK IN
                     </Button>
@@ -68,9 +65,7 @@ render() {
         </div>
     )
 }
-
 }
-
 
 
 export default ClockInOut;

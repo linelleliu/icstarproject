@@ -2,9 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from "./mlogo.jpg";
 import './StudentLogIn.css';
+import App from './App';
 
 
-function myFunction() {
+function loginFunction() {
   let userData = [
   {
     username:'user1',
@@ -23,25 +24,21 @@ function myFunction() {
   let username=document.getElementById('eid')
   let password=document.getElementById('pass')
     
-  for(let i=0;i<userData.length;i++) {
-    let username=document.getElementById('eid')
-    let password=document.getElementById('pass')
-  
     for(let i=0;i<userData.length;i++) {
       if(username.value==userData[i].username && password.value==userData[i].password) {
-        myFunction.isAuthenticated = true;
-          alert("user access granted")
-      return
+        loginFunction.isAuthenticated = true;
+          // alert("user access granted")
+      return <App />
       }
-    }
-      alert("Incorrect Email or Password")
-    }
+    } alert("Incorrect Email or Password")
   }
   
 function StudentLogIn() {
     return(
       <div>
+        <br/>
         <img src={logo} width="90%" height="auto" paddingLeft="20px"></img>
+        <br/>
         <br/>
         <br/>
         <input id="eid" className="email" placeholder="Email" type="text" />
@@ -54,7 +51,7 @@ function StudentLogIn() {
         <Link to="/forgotPass" className="linkForgot"><i>Forgot Password?</i></Link>
         <br/>
         <br/>
-        <button onClick={myFunction} className="button">LOGIN</button>
+        <button onClick={loginFunction} className="button">LOGIN</button>
         <br/>
         <br/>
         <br/>

@@ -33,6 +33,8 @@ function StudentForgotPass() {
    return(
       <div>
          <br/>
+         <br/>
+         <br/>
          <img src={logo}  width="140" height="140"></img>
          <br/>
          <h3>Forgotten your password?</h3>
