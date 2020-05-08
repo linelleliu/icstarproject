@@ -2,10 +2,10 @@ var mysql = require('mysql');
 var fs = require('fs')
 
 var connection = mysql.createConnection({
-  host     : "aa18hthcaue5zg.cbzmg30jppts.us-east-2.rds.amazonaws.com",
-  user     : "username",
-  password : "password",
-  port     : 3306
+  host: "aa18hthcaue5zg.cbzmg30jppts.us-east-2.rds.amazonaws.com",
+  user: "username",
+  password: "password",
+  port: 3306
 });
 
 var user = {
@@ -17,7 +17,7 @@ var user = {
 }
 
 function createUser(user) {
-  connection.connect(function(err) {
+  connection.connect(function (err) {
     if (err) {
       console.error('Database connection failed: ' + err.stack);
       return;
@@ -32,5 +32,7 @@ function createUser(user) {
   });
 }
 
-// createUser(user)
+createUser(user)
 // connection.end();
+
+

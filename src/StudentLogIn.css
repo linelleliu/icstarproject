@@ -1,0 +1,38 @@
+body {
+   text-align: center;
+}
+
+.email {
+    box-sizing: border-box;
+    height: 40px;
+    width: 70%;
+    padding: 10px;
+}
+
+.passw {
+    box-sizing: border-box;
+    height: 40px;
+    width: 70%;
+    padding: 10px;
+}
+
+.button {
+    box-sizing: border-box;
+    height: 40px;
+    width: 70%;
+    cursor: pointer;
+    background-color: rgb(52, 52, 204);
+    color: white;
+}
+
+.linkForgot {
+    color: blue;
+    font-size: 13px;
+   
+}
+
+.linkRegister {
+    color: blue;
+    font-size: 13px;
+}
+
