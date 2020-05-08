@@ -41,7 +41,6 @@ function myFunction() {
 function StudentLogIn() {
     return(
       <div>
-     
         <img src={logo} width="90%" height="auto" paddingLeft="20px"></img>
         <br/>
         <br/>

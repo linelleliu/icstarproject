@@ -11,19 +11,22 @@ import {
 } from "react-router-dom";
 import StudentRegistration from './StudentRegistration';
 import WorkShop from './WorkShop';
+import StudentForgotPass from './StudentForgotPass';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    {/* <Router>
       <Switch>
         <Route exact path="/" component={StudentLogIn} />
-        <Route path='/register' component={StudentRegistration} />
-      </Switch>
-    </Router>
+        <Route path='/register' component={StudentRegistration} /> */}
+        {/* <Route path='/' component={StudentForgotPass} /> */}
+      {/* </Switch>
+    </Router> */}
     {/* <Main /> */}
     {/* <App /> */}
     {/* <Workhop /> */}
+    <StudentForgotPass />
   </React.StrictMode>,
   document.getElementById('root')
 );
