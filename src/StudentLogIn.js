@@ -2,7 +2,15 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from "./mlogo.jpg";
 import './StudentLogIn.css';
-
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import { makeStyles } from '@material-ui/core/styles';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import FormControl from '@material-ui/core/FormControl';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 
 function myFunction() {
   let userData = [
@@ -44,8 +52,15 @@ function StudentLogIn() {
         <img src={logo} width="90%" height="auto" paddingLeft="20px"></img>
         <br/>
         <br/>
-        <input id="eid" className="email" placeholder="Email" type="text" />
+        <input id="eid" className="email" placeholder="Email Address" InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <AccountCircle />
+            </InputAdornment>
+          ),
+        }} type="text" />
         <br/>
+        
         <lable id = "error" style={{ visibility:"hidden", color:"red" }}>Invalid Email</lable>
         <br/>
         <input id="pass" className= "passw" placeholder="Password" type="password" />

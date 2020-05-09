@@ -35,7 +35,7 @@ function StudentForgotPass() {
          <br/>
          <img src={logo}  width="140" height="140"></img>
          <br/>
-         <h3>Forgotten your password?</h3>
+         <h3>Forgotten Your Password?</h3>
          <pre>Don't worry we'll send you a 
             message to help 
             you reset your password</pre>
