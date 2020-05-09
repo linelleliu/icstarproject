@@ -28,7 +28,7 @@ function loginFunction() {
       if(username.value==userData[i].username && password.value==userData[i].password) {
         loginFunction.isAuthenticated = true;
           // alert("user access granted")
-      return <App />
+      return <App /> 
       }
     } alert("Incorrect Email or Password")
   }

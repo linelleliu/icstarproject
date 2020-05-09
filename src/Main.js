@@ -17,7 +17,8 @@ render() {
         <StudentLogIn goToApp={this.goToApp}/>
     )
     } else if (this.state.currentPage === 'App') {
-    return (
+   
+        return (
         <App />
     )
     }
