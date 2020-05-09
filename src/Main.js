@@ -13,6 +13,7 @@ class Main extends React.Component {
 
 render() {
     if (this.state.currentPage === 'logIn') {
+
     return (
         <StudentLogIn goToApp={this.goToApp}/>
     )

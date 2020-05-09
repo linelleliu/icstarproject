@@ -15,15 +15,15 @@ import StudentForgotPass from './StudentForgotPass';
 
 
 ReactDOM.render(
-  
+
   <React.StrictMode>
-    <Router>
+     <Router>
       <Switch>
-        <Route exact path="/" component={StudentLogIn} />
-        <Route path='/register' component={StudentRegistration} />
+       <Route exact path="/" component={StudentLogIn} />
+       <Route path='/register' component={StudentRegistration} />
         <Route path='/forgotPass' component={StudentForgotPass} />
-      </Switch> 
-    </Router>
+       </Switch> 
+     </Router>
     {/* <Main /> */}
     {/* <App /> */}
     {/* <Workhop /> */}
