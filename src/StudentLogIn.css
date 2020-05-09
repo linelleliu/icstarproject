@@ -19,15 +19,18 @@ body {
 .button {
     box-sizing: border-box;
     height: 43px;
-    width: 70%;
+    width: 80%;
     cursor: pointer;
-    background-color: rgb(52, 52, 204);
+    background-color: #1976d2;
     color: white;
+    border-radius: 8px;
 }
 
 .linkForgot {
     color: blue;
     font-size: 13px;
+    text-align: right;
+  
    
 }
 
@@ -36,8 +39,11 @@ body {
     font-size: 13px;
 }
 
+h5 {
+    margin: 0;
+}
+
 h3 {
     text-align: center;
 }
-
 

@@ -3,7 +3,27 @@ import {Link} from 'react-router-dom';
 import logo from "./mlogo.jpg";
 import './StudentLogIn.css';
 import App from './App';
+import { makeStyles } from '@material-ui/core/styles';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import FormControl from '@material-ui/core/FormControl';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import LockIcon from '@material-ui/icons/Lock';
 
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(4),
+  },
+}));
+
+const useStyles1 = makeStyles({
+  root: {
+    color: "#1976d2", //blue 700
+  },
+});
 
 function loginFunction() {
   let userData = [
@@ -34,30 +54,68 @@ function loginFunction() {
   }
   
 function StudentLogIn() {
+  const classes = useStyles();
+  const classes1 = useStyles1()
     return(
       <div>
         <br/>
-        <img src={logo} width="90%" height="auto" paddingLeft="20px"></img>
+        <img className="logo" src={logo} width="90%" height="auto" paddingLeft="20px" ></img>
+        
+        <div className={classes.margin} >
+          <Grid container spacing={1} alignItems="flex-end">
+            <TextField
+              id="outlined-basic"
+              label="Email"  
+              variant="outlined"
+              size="small"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle  className={classes1.root} />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </Grid>
+        </div>
+        <div className={classes.margin} >
+            <Grid container spacing={1} alignItems="flex-end">
+              <TextField
+                id="outlined-basic"
+                label="Password"  
+                variant="outlined"
+                size="small"
+                type="password"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <LockIcon className={classes1.root}/>
+                    </InputAdornment>
+                  ),
+                }}
+              />
+          </Grid>
+        </div>
+       
+        {/* <lable id = "error" style={{ visibility:"hidden", color:"red" }}>Invalid Email</lable> */}
+        {/* <input id="eid" className="email" placeholder="Email" type="text" /> */}
+        {/* <input id="pass" className= "passw" placeholder="Password" type="password" /> */}
+        {/* <lable id = "word" style={{ visibility:"hidden", color:"red" }}>Invalid password</lable> */}
+        
+       
+        <button onClick={loginFunction} className="button">LOG IN</button>
         <br/>
         <br/>
-        <br/>
-        <input id="eid" className="email" placeholder="Email" type="text" />
-        <br/>
-        <lable id = "error" style={{ visibility:"hidden", color:"red" }}>Invalid Email</lable>
-        <br/>
-        <input id="pass" className= "passw" placeholder="Password" type="password" />
-        <br/>
-        <lable id = "word" style={{ visibility:"hidden", color:"red" }}>Invalid password</lable>
         <Link to="/forgotPass" className="linkForgot"><i>Forgot Password?</i></Link>
         <br/>
         <br/>
-        <button onClick={loginFunction} className="button">LOGIN</button>
         <br/>
         <br/>
         <br/>
-        <br/> 
-        <br/>
-        <Link to="/register" className="linkRegister">REGISTER</Link>
+        <div>
+          <h5>Don't have an account?</h5>
+          <Link to="/register" className="linkRegister">Register Here</Link>
+        </div>
       </div>
     );
 };
