@@ -72,7 +72,6 @@ const MenuAppBar = (props) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
 
@@ -108,7 +107,6 @@ const MenuAppBar = (props) => {
   return (
     <div className={classes.root} >
       
-        
       <AppBar position="static" >
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">

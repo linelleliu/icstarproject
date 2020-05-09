@@ -1,6 +1,7 @@
 import React from 'react';
 import StudentRegistration from './StudentRegistration'
-import App from './App'
+import App from './App';
+import StudentLogIn from './StudentLogIn'
 
 
 class Main extends React.Component {
@@ -14,13 +15,13 @@ render() {
     if (this.state.currentPage === 'logIn') {
 
     return (
-        <StudentRegistration goToApp={this.goToApp}/>
+        <StudentLogIn goToApp={this.goToApp}/>
     )
-} else if (this.state.currentPage === 'App') {
+    } else if (this.state.currentPage === 'App') {
     return (
         <App />
     )
-}
+    }
 }
 };
 
