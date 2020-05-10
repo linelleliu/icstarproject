@@ -1,5 +1,5 @@
 body {
-   text-align: center;
+    text-align: center;
 }
 
 .email {
@@ -18,7 +18,7 @@ body {
 
 .button {
     box-sizing: border-box;
-    height: 43px;
+    height: 40px;
     width: 80%;
     cursor: pointer;
     background-color: #1976d2;
@@ -30,20 +30,27 @@ body {
     color: blue;
     font-size: 13px;
     text-align: right;
-  
-   
 }
 
-.linkRegister {
+.linkRegister, .linkPrivacy, .linkLogIn {
     color: blue;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 h5 {
     margin: 0;
 }
 
-h3 {
+.forgotten {
     text-align: center;
 }
 
+h2 {
+    color: white;
+    margin: 0;
+    background-color:  #1976d2;
+}
+
+.registrationtile {
+    padding-top: 40px;
+}

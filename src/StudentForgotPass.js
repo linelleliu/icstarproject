@@ -37,10 +37,9 @@ function StudentForgotPass() {
          <br/>
          <img src={logo}  width="140" height="140"></img>
          <br/>
-         <h3>Forgotten Your Password?</h3>
-         <pre>Don't worry we'll send you a 
-            message to help 
-            you reset your password</pre>
+         <h3 className="forgotten">Forgotten Your Password?</h3>
+         Don't worry we'll send you a message to help you reset your password
+         <br/>
          <br/>
          <input id="eid" className= "email" placeholder="Enter Email" type="text"/>
          <br/>

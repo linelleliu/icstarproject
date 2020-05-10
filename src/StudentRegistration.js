@@ -1,138 +1,348 @@
 import React from 'react';
-import  {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import './StudentLogIn.css';
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    marginTop: theme.spacing(3),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(0),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+  
+}));
 
 
+export default function SignUp() {
+  const classes = useStyles();
+  const [state, setState] = React.useState({
+    age: '',
+    name: 'hai',
+  });
 
-function StudentRegistration(props) {
+  const handleChange = (event) => {
+    const name = event.target.name;
+    setState({
+      ...state,
+      [name]: event.target.value,
+    });
+  };
+
+  
   return (
-    <div className="App">
-        
-        <form action="action_page.php">
-        <div class="container">
-          <h2> Student Registration </h2>
-          <p>Please fill in this form to create an account.</p>
-          
-          <label for="fname"><b>First Name</b></label>
-          <input type="text" placeholder="First Name" name="fname" required/>
+    <Container component="main" maxWidth="xs">
+      <div className="registrationtile">
+        <h2><b>Student Registration</b></h2>
+        Please fill in this form to create an account.
+      </div>
+      <CssBaseline />
+      <div className={classes.paper}>
+        <form className={classes.form} noValidate>
+          <b>Name</b>
+          <Grid container spacing={1}>
+            <Grid item xs={5} sm={5}>
+              <TextField
+                autoComplete="fname"
+                name="firstName"
+                variant="outlined"
+                required
+                fullWidth
+                id="firstName"
+                label="First Name"
+                autoFocus
+                size="small"
+              />
+            </Grid>
+            <Grid item xs={2} sm={2}>
+              <TextField
+                autoComplete="mname"
+                name="middleName"
+                variant="outlined"
+                fullWidths
+                id="middletName"
+                label="M"
+                autoFocus
+                size="small"
+              />
+            </Grid>
+            <Grid item xs={5} sm={5}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="lastName"
+                label="Last Name"
+                name="lastName"
+                autoComplete="lname"
+                size="small"
+              />
+            </Grid>
+          </Grid>
           <br/>
-          <label for="lname"><b>Last Name</b></label>
-          <input type="text" placeholder="Last Name" name="lname" required/>
-          <label for="lname"><b>Last Name</b></label>
-          <select id="Birthday_Month" name="Birthday_Month">
-            <option value="-1">Month</option>
-            <option value="January">Jan</option>
-            <option value="February">Feb</option>
-            <option value="March">Mar</option>
-            <option value="April">Apr</option>
-            <option value="May">May</option>
-            <option value="June">Jun</option>
-            <option value="July">Jul</option>
-            <option value="August">Aug</option>
-            <option value="September">Sep</option>
-            <option value="October">Oct</option>
-            <option value="November">Nov</option>
-            <option value="December">Dec</option>
-          </select>
-            
-          <select name="Birthday_day" id="Birthday_Day">
-            <option value="-1">Day</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-            <option value="11">11</option>
-            <option value="12">12</option>
-            <option value="13">13</option>
-            <option value="14">14</option>
-            <option value="15">15</option>
-            <option value="16">16</option>
-            <option value="17">17</option>
-            <option value="18">18</option>
-            <option value="19">19</option>
-            <option value="20">20</option>
-            <option value="21">21</option>
-            <option value="22">22</option>
-            <option value="23">23</option>
-            <option value="24">24</option>
-            <option value="25">25</option>
-            <option value="26">26</option>
-            <option value="27">27</option>
-            <option value="28">28</option>
-            <option value="29">29</option>
-            <option value="30">30</option>
-            <option value="31">31</option>
-           </select>
 
-          <select name="Birthday_Year" id="Birthday_Year">
-            <option value="-1">Year</option>
-            <option value="2012">2012</option>
-            <option value="2011">2011</option>
-            <option value="2010">2010</option>
-            <option value="2009">2009</option>
-            <option value="2008">2008</option>
-            <option value="2007">2007</option>
-            <option value="2006">2006</option>
-            <option value="2005">2005</option>
-            <option value="2004">2004</option>
-            <option value="2003">2003</option>
-            <option value="2002">2002</option>
-            <option value="2001">2001</option>
-            <option value="2000">2000</option>
-            <option value="1999">1999</option>
-            <option value="1998">1998</option>
-            <option value="1997">1997</option>
-            <option value="1996">1996</option>
-            <option value="1995">1995</option>
-            <option value="1994">1994</option>
-            <option value="1993">1993</option>
-            <option value="1992">1992</option>
-            <option value="1991">1991</option>
-            <option value="1990">1990</option>
-            <option value="1989">1989</option>
-            <option value="1988">1988</option>
-            <option value="1987">1987</option>
-            <option value="1986">1986</option>
-            <option value="1985">1985</option>
-            <option value="1984">1984</option>
-            <option value="1983">1983</option>
-            <option value="1982">1982</option>
-            <option value="1981">1981</option>
-            <option value="1980">1980</option>
-          </select>
+          <b>Birthday</b>
+          <Grid container spacing={1}>
+            <Grid item xs={4} sm={4}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="birth"
+                label="Month"
+                name="month"
+                autoComplete="month"
+                size="small"
+                type="number"
+                InputProps={{
+                  inputProps: { 
+                      max: 12, min: 1
+                  }
+              }}
+              />
+            </Grid>
+            <Grid item xs={4} sm={4}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="day"
+                label="Day"
+                id="day"
+                autoComplete="day"
+                size="small"
+                type="number"
+                InputProps={{
+                  inputProps: { 
+                      max: 30, min: 1
+                  }
+              }}
+              />
+            </Grid>
+            <Grid item xs={4} sm={4}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="year"
+                label="Year"
+                id="year"
+                autoComplete="year"
+                size="small"
+                type="number"
+                InputProps={{
+                  inputProps: { 
+                      max: 2018, min: 1990
+                  }
+              }}
+              />
+            </Grid>
+          </Grid>
+
+          <br/>
+          <Grid container spacing={1}>
+            <Grid item xs={6} sm={6}>
+              <b>Student ID</b>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="studentid"
+                  label="Student ID"
+                  name="studentid"
+                  autoComplete="studentid"
+                  size="small"
+                />
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <b>Gender</b>
+              <br/>
+                <input type="radio" id="female" name="gender"/>
+                <label for="Female">Female</label>
+   
+                <input type="radio" id="male" name="gender"/>
+                <label for="Male">Male</label>
+            </Grid>
+          </Grid>
           
-          <label for="Psword"><b> Password</b></label>
-          <input type="Password" placeholder="Enter Student Id" name="psw" required/><br/><br/>
-      
-          <label for="psw-repeat"><b>Repeat Password</b></label>
-          <input type="password" placeholder="Repeat Student Id" name="psw-repeat" required/><br/><br/>
+          <br/>
+          <b>Current Address</b>
+          <Grid container spacing={1}>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="address"
+                label="Street Address"
+                name="address"
+                autoComplete="address"
+                autoFocus
+                size="small"
+              />
+            </Grid>
+          </Grid>
+          <Grid container spacing={1}>
+            <Grid item xs={6} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="city"
+                label="City"
+                id="city"
+                autoComplete="city"
+                autoFocus
+                size="small"
+              />
+            </Grid>
+            <Grid item xs={6} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="state"
+                label="State/Province"
+                id="state"
+                autoComplete="state"
+                autoFocus
+                size="small"
+              />
+            </Grid>
+          </Grid>
+          <Grid container spacing={1}>
+            <Grid item xs={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="zip code"
+                label="Postal/Zip Code"
+                id="zip code"
+                autoComplete="zip code"
+                autoFocus
+                size="small"
+              />
+            </Grid>
+            <Grid item xs={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="country"
+                label="Country"
+                id="country"
+                autoComplete="country"
+                autoFocus
+                size="small"
+              />
+            </Grid>
+          </Grid>
+          <br/>
+          <b>Student Email</b>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+                size="small"
+              />
+            </Grid>
+          <br/>
 
-          <label for="Work Site"><b> Work Site </b></label>
-          <input type="text" placeholder="Enter" name="Work Site" required/><br/><br/>
+          <b>Password</b>
+          <Grid container spacing={1}>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+                size="small"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="confirm password"
+                label="Confirm Password"
+                type="password"
+                id="confirm password"
+                autoComplete="current-password"
+                size="small"
+              />
+            </Grid>
+          </Grid>
+          <br/>
 
-          <label for="School Code"><b>School Code</b></label>
-          <input type="School" placeholder="Ener your school" name="School Code" required/><br/><br/>
-          <div>
-              <input type="radio" id="male" name="gender"/><label for="Male">Male</label>
-              <input type="radio" id="Female" name="gender"/><label for="Female">Female</label><br/><br/>
-          </div>
-      
-          <p>By creating an account you agree to our <a >Terms & Privacy</a>.</p>
-          <button type="submit" class="registerbtn" >Register</button>
-        </div>
-      
-        <div class="container signin">
-          <p>Already have an account? <a  onClick={props.goToApp}>Sign in</a>.</p>
-        </div>
-        </form>  
-
-    </div>
+          <b>School Code</b>
+          <Grid container spacing={1}>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                name="school code"
+                label="School Code"
+                id="school code"
+                autoComplete="school code"
+                size="small"
+              />
+            </Grid>
+          </Grid>
+          <FormControlLabel
+              control={<Checkbox value="allowExtraEmails" color="primary" />}
+          />
+          <Link to="/" className="linkPrivacy">Agree to our Terms & Privacy</Link>
+          
+          <br/>
+          <br/>
+          <button className="button">SIGN UP</button>
+          <br/>
+          <Link to="/" className="linkLogIn">Don't have an account? Sign Up</Link>
+          <br/>
+          <br/>
+        </form>
+      </div>
+    </Container>
   );
-};
+}
 
-export default StudentRegistration;
+
+
+
+
+
+
+
