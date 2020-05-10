@@ -14,19 +14,21 @@ import WorkShop from './WorkShop';
 import StudentForgotPass from './StudentForgotPass';
 
 
+
 ReactDOM.render(
 
   <React.StrictMode>
      <Router>
       <Switch>
-       <Route exact path="/" component={StudentLogIn} />
-       <Route path='/register' component={StudentRegistration} />
-        <Route path='/forgotPass' component={StudentForgotPass} />
-       </Switch> 
+        <Route exact path="/" component={StudentLogIn} />
+        <Route path='/Register' component={StudentRegistration} />
+        <Route path='/ForgotPassword' component={StudentForgotPass} />
+      </Switch> 
      </Router>
     {/* <Main /> */}
     {/* <App /> */}
     {/* <Workhop /> */}
+
    
   </React.StrictMode>,
   document.getElementById('root')

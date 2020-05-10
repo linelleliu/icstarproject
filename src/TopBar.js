@@ -35,6 +35,7 @@ const useStyles1 = makeStyles({
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    backgroundColor: "#1976d2",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -107,7 +108,7 @@ const MenuAppBar = (props) => {
   return (
     <div className={classes.root} >
       
-      <AppBar position="static" >
+      <AppBar className={classes.root} position="static" >
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             {['left'].map((anchor) => (

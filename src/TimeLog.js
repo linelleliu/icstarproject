@@ -10,12 +10,12 @@ import TableRow from "@material-ui/core/TableRow";
 
 
 const columns = [
-  { id: "time in", label: "Time In", minWidth: 100 },
-  { id: "time out", label: "Time Out", minWidth: 100 },
+  { id: "time in", label: "Time In", minWidth: 80 },
+  { id: "time out", label: "Time Out", minWidth: 80 },
   {
     id: "worked time",
     label: "Worked Time (Hour)",
-    minWidth: 90,
+    minWidth: 50,
     align: "right",
   }
   
@@ -69,7 +69,6 @@ export default function StickyHeadTable(props) {
           </TableBody>
         </Table>
       </TableContainer>
-    
     </Paper>
     
   );

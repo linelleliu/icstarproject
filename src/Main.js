@@ -1,5 +1,4 @@
 import React from 'react';
-import StudentRegistration from './StudentRegistration'
 import App from './App';
 import StudentLogIn from './StudentLogIn'
 

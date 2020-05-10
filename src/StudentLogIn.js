@@ -44,14 +44,14 @@ function loginFunction() {
   }
   ]
 
-  let username=document.getElementById('eid')
-  let password=document.getElementById('pass')
+  let username=document.getElementById('email')
+  let password=document.getElementById('password')
     
-  for(let i=0;i<userData.length;i++) {
-    if(username.value==userData[i].username && password.value==userData[i].password) {
+  for(let i=0; i<userData.length; i++) {
+    if(username.value === userData[i].username && password.value === userData[i].password) {
       loginFunction.isAuthenticated = true;
-        alert("user access granted")
-    return <App /> 
+        // alert("user access granted")
+    return 
     }
     } alert("Incorrect Email or Password")
 }
@@ -113,14 +113,14 @@ function StudentLogIn() {
         <button onClick={loginFunction} className="button">LOG IN</button>
         <br/>
         <br/>
-        <Link to="/forgotpass" className="linkForgot"><i>Forgot Password?</i></Link>
+        <Link to="/ForgotPassword" className="linkForgot"><i>Forgot Password?</i></Link>
         <br/>
         <br/>
         <br/>
         <br/>
         <br/>
         <div>
-          <Link to="/register" className="linkRegister">Don't have an account? Sign Up</Link>
+          <Link to="/Register" className="linkRegister">Don't have an account? Sign Up</Link>
         </div>
       </div>
     );
