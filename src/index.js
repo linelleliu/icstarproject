@@ -12,23 +12,23 @@ import {
 import StudentRegistration from './StudentRegistration';
 import WorkShop from './WorkShop';
 import StudentForgotPass from './StudentForgotPass';
-
+import StudentSurvey from './StudentSurvey'
 
 
 ReactDOM.render(
 
   <React.StrictMode>
-     <Router>
+     {/* <Router>
       <Switch>
         <Route exact path="/" component={StudentLogIn} />
         <Route path='/Register' component={StudentRegistration} />
         <Route path='/ForgotPassword' component={StudentForgotPass} />
       </Switch> 
-     </Router>
+     </Router> */}
     {/* <Main /> */}
     {/* <App /> */}
     {/* <Workhop /> */}
-
+      <StudentSurvey />
    
   </React.StrictMode>,
   document.getElementById('root')

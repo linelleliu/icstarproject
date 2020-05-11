@@ -3,17 +3,12 @@ import {Link} from 'react-router-dom';
 import logo from "./mlogo.jpg";
 import './StudentLogIn.css';
 import { makeStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import LockIcon from '@material-ui/icons/Lock';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import App from './App';
+
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -120,7 +115,7 @@ function StudentLogIn() {
         <br/>
         <br/>
         <div>
-          <Link to="/Register" className="linkRegister">Don't have an account? Sign Up</Link>
+        <Link to="/Register" className="linkRegister">Don't have an account? Sign Up</Link>
         </div>
       </div>
     );

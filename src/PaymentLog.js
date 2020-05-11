@@ -1,18 +1,7 @@
 import React from 'react';
 
-class PaymentLog extends React.Component {
-    constructor(props) {
-        super(props);
-
-
-
-render() {
-    return (
-        
-    )
-
-
-
+function PaymentLog () {
+    return <h1>hi</h1>
 }
 
 export default PaymentLog;

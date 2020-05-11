@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import './StudentLogIn.css';
 
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(3),
@@ -31,26 +32,12 @@ const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
-  
 }));
 
 
 export default function SignUp() {
   const classes = useStyles();
-  const [state, setState] = React.useState({
-    age: '',
-    name: 'hai',
-  });
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: event.target.value,
-    });
-  };
-
-  
   return (
     <Container component="main" maxWidth="xs">
       <div className="registrationtile">
@@ -325,7 +312,6 @@ export default function SignUp() {
               control={<Checkbox value="allowExtraEmails" color="primary" />}
           />
           <Link to="/" className="linkPrivacy">Agree to our Terms & Privacy</Link>
-          
           <br/>
           <br/>
           <button className="button">SIGN UP</button>
