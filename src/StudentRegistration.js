@@ -330,7 +330,8 @@ export default function SignUp() {
           <br/>
           <button className="button">SIGN UP</button>
           <br/>
-          <Link to="/" className="linkLogIn">Don't have an account? Sign Up</Link>
+          <br/>
+          <Link to="/" className="linkLogIn">Already have an account? Sign In</Link>
           <br/>
           <br/>
         </form>
