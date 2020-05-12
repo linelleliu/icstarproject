@@ -18,17 +18,16 @@ import StudentSurvey from './StudentSurvey'
 ReactDOM.render(
 
   <React.StrictMode>
-     {/* <Router>
+     <Router>
       <Switch>
-        <Route exact path="/" component={StudentLogIn} />
+        <Route exact path="/" component={Main} />
         <Route path='/Register' component={StudentRegistration} />
         <Route path='/ForgotPassword' component={StudentForgotPass} />
       </Switch> 
-     </Router> */}
-    {/* <Main /> */}
+     </Router>
     {/* <App /> */}
     {/* <Workhop /> */}
-      <StudentSurvey />
+      {/* <StudentSurvey /> */}
    
   </React.StrictMode>,
   document.getElementById('root')

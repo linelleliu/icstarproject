@@ -23,7 +23,7 @@ const useStyles1 = makeStyles({
   },
 });
 
-function loginFunction() {
+function loginFunction(func) {
   let userData = [
   {
     username:'user1',
@@ -46,12 +46,13 @@ function loginFunction() {
     if(username.value === userData[i].username && password.value === userData[i].password) {
       loginFunction.isAuthenticated = true;
         // alert("user access granted")
-    return 
+      func();
+      return
     }
     } alert("Incorrect Email or Password")
 }
   
-function StudentLogIn() {
+function StudentLogIn(props) {
   const classes = useStyles();
   const classes1 = useStyles1()
     return(
@@ -105,7 +106,7 @@ function StudentLogIn() {
         {/* <lable id = "word" style={{ visibility:"hidden", color:"red" }}>Invalid password</lable> */}
   
         
-        <button onClick={loginFunction} className="button">LOG IN</button>
+        <button onClick={()=>loginFunction(props.goToApp)} className="button">LOG IN</button>
         <br/>
         <br/>
         <Link to="/ForgotPassword" className="linkForgot"><i>Forgot Password?</i></Link>

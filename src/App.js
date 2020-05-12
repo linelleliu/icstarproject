@@ -78,7 +78,7 @@ class App extends React.Component{
                     date={this.state.date}
                     time={this.state.time}
                     working={this.state.working}
-                   clockInArray={this.state.clockIn}
+                    clockInArray={this.state.clockIn}
                 /> 
                 : null }
 
