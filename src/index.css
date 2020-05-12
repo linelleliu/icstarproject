@@ -1,15 +1,30 @@
 .image {
-    color: brown;
-    border: black solid 1px;
-    width: 90%;
-    height: 80%;
-    align-content: flex-end;
+    width: 90vw;
+    height: 25vh;
+    align-content: center;
     
-    margin: 10px;
+}
+
+h1 {
+    text-align: right;
+    color: #2196f3;
+   
 }
 
 h4 {
     background-color: #1976d2;
     color: white;
-    margin: 1px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
+
+.headerimage {
+    margin: 10px;
+    border: black solid 1px;
+}
+
+/* .trackerbeeheader {
+    margin-bottom: 0px;
+    border: blueviolet solid 1px;
+    padding-bottom: 0px;
+} */

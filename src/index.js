@@ -17,14 +17,16 @@ import AdministratorStudentCommunity from './AdministratorStudentCommunity'
 import GraduateSurvey from './GraduateSurvey'
 import StudentEmployeeSurvey from './StudentEmployeeSurvey'
 
+
 ReactDOM.render(
 
   <React.StrictMode>
      <Router>
       <Switch>
         <Route exact path="/" component={AdministratorStudentCommunity} />
-        <Route path='/Register' component={StudentRegistration} />
-        <Route path='/ForgotPassword' component={StudentForgotPass} />
+        <Route path='/studentlogin' component={StudentLogIn} />
+        <Route path='/register' component={StudentRegistration} />
+        <Route path='/forgotpassword' component={StudentForgotPass} />
       </Switch> 
      </Router>
     {/* <App /> */}

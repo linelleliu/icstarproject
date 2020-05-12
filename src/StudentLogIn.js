@@ -8,11 +8,17 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import LockIcon from '@material-ui/icons/Lock';
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import axios from "axios";
 
 
 const useStyles = makeStyles((theme) => ({
   margin: {
     margin: theme.spacing(4),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
 }));
 
@@ -23,101 +29,92 @@ const useStyles1 = makeStyles({
   },
 });
 
-function loginFunction(func) {
-  let userData = [
-  {
-    username:'user1',
-    password:'pass1'
-  }, 
-  {
-    username:'user2',
-    password:'pass2'
-  }, 
-  {
-    username:'user3',
-    password:'pass3'
-  }
-  ]
-
-  let username=document.getElementById('email')
-  let password=document.getElementById('password')
-    
-  for(let i=0; i<userData.length; i++) {
-    if(username.value === userData[i].username && password.value === userData[i].password) {
-      loginFunction.isAuthenticated = true;
-        // alert("user access granted")
-      func();
-      return
-    }
-    } alert("Incorrect Email or Password")
+function tryToLogin() {
+    let username1=document.getElementById('eid').value
+    let password1=document.getElementById('pass').value
+    let data={username:username1,password:password1}
+    axios.post('http://localhost:8080/getuser',data)
 }
   
 function StudentLogIn(props) {
   const classes = useStyles();
   const classes1 = useStyles1()
     return(
-      <div>
-        <br/>
-        <img className="logo" src={logo} width="90%" height="auto" paddingLeft="20px" ></img>
-        
-        <div className={classes.margin} >
-          <Grid container spacing={1} alignItems="flex-end">
-            <TextField
-              id="email"
-              label="Email"  
-              variant="outlined"
-              size="small"
-              required
-              autoFocus
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <AccountCircle  className={classes1.root} />
-                  </InputAdornment>
-                ),
-              }}
-            />
-          </Grid>
-        </div>
-        <div className={classes.margin} >
-            <Grid container spacing={1} alignItems="flex-end">
-              <TextField
-                id="password"
-                label="Password"  
-                variant="outlined"
-                size="small"
-                required
-                type="password"
-                autoComplete="current-password"
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <LockIcon className={classes1.root}/>
-                    </InputAdornment>
-                  ),
-                }}
-              />
-          </Grid>
-        </div>
-        
-        {/* <lable id = "error" style={{ visibility:"hidden", color:"red" }}>Invalid Email</lable> */}
-        {/* <input id="eid" className="email" placeholder="Email" type="text" /> */}
-        {/* <input id="pass" className= "passw" placeholder="Password" type="password" /> */}
-        {/* <lable id = "word" style={{ visibility:"hidden", color:"red" }}>Invalid password</lable> */}
-  
-        
-        <button onClick={()=>loginFunction(props.goToApp)} className="button">LOG IN</button>
-        <br/>
-        <br/>
-        <Link to="/ForgotPassword" className="linkForgot"><i>Forgot Password?</i></Link>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <div>
-        <Link to="/Register" className="linkRegister">Don't have an account? Sign Up</Link>
-        </div>
+      <div> 
+        <Container component="main" maxWidth="xs">
+          <img className="logo" src={logo} width="340vw" height="160vh"></img>
+          
+          <CssBaseline />
+            <div className={classes.margin}>
+              <Grid container spacing={1}>
+                <Grid item xs={12} sm={12}>
+                  <TextField
+                    autoComplete="email"
+                    name="email"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email"
+                    autoFocus
+                    size="small"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <AccountCircle  className={classes1.root} />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </div>
+            <div className={classes.margin} >
+              <Grid container spacing={1}>
+                <Grid item xs={12} sm={12}>
+                  <TextField
+                    autoComplete="password"
+                    name="password"
+                    variant="outlined"
+                    required
+                    fullWidth
+                    id="password"
+                    label="Password"
+                    autoFocus
+                    type="password"
+                    size="small"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <LockIcon className={classes1.root}/>
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+              </Grid>
+            </div>
+
+          
+          {/* <lable id = "error" style={{ visibility:"hidden", color:"red" }}>Invalid Email</lable> */}
+          {/* <input id="eid" className="email" placeholder="Email" type="text" /> */}
+          {/* <input id="pass" className= "passw" placeholder="Password" type="password" /> */}
+          {/* <lable id = "word" style={{ visibility:"hidden", color:"red" }}>Invalid password</lable> */}
+    
+          
+          <button onClick={()=>tryToLogin(props.goToApp)} className="button">SIGN IN</button>
+          <br/>
+          <br/>
+          <Link to="/forgotpassword" className="linkForgot"><i>Forgot Password?</i></Link>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <div>
+          <Link to="/register" className="linkRegister">Don't have an account? Sign Up</Link>
+          </div>
+          </Container>
       </div>
     );
 };

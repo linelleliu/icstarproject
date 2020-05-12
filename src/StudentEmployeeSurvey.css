@@ -1,19 +1,19 @@
-* {
+/* * {
      box-sizing: border-box;
 }
 
 /* Create three equal columns that floats next to each other */
 
-.column {
+/* .column {
   float: left;
   width: 50.33%;
   padding: 10px;
-  height: 70px; /* Should be removed. Only for demonstration */
-}
+  height: 70px; 
+} */
 
 /* Clear floats after the columns */
 
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
@@ -23,6 +23,5 @@ h1 { text-align: center;
 }
 
 h2 {text-align: left;
-}
+} */
 
- 

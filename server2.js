@@ -19,20 +19,26 @@ const connection = mysql.createConnection({
 
 connection.connect(err=> {
     if (err) {
-        console.error(err)
+      console.error('Database connection failed: ' + err.stack);
+      return;
     }
-    console.log('Connected! YAHOOO!!!')
-
-    app.post('/createuser', (req,res) => {
-            console.log(req.body)
-            connection.query(fs.readFileSync('./sql/createUser.sql').toString(),[req.body.username, req.body.password], (err,resp)=>{
-                res.json(resp)
-            })
-        })
-    app.post('/getuserdata',(req,res)=> {
+  
+    console.log('Connected to database.hurry');
+    app.post('/getuser',(req,res)=>{
         console.log(req.body)
-        connection.query(fs.readFileSync('./sql.getUser.sql').toString(),[req.body.username],(err,resp)=> {
-            res.json(resp)
+
+        connection.query(fs.readFileSync('./sql/getUserdata.sql').toString(),[req.body.username,req.body.password],(err,resp)=>{         
+            if(err)
+            {
+            res.json(err)
+            }
+            console.log(resp[0])
+            if(req.body.password===resp[0].password){
+            res.json('correct password')
+            } else {
+            res.json('not')
+            }
+            
         })
-    })    
-})
+    })
+});

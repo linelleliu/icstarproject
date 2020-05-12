@@ -6,6 +6,7 @@ import students from './students.jpg';
 import community from './community.jpg'
 import { Grid } from '@material-ui/core';
 import admin1 from './admin1.jpg';
+import {Link } from "react-router-dom";
 
 function toStudentLogIn() {
 
@@ -15,25 +16,29 @@ function toStudentLogIn() {
 function AdministratorStudentCommunity() {
     return (
         <div>
+            <div className="trackerbeeheader">
             <Grid container spacing={0}>
-                <Grid item xs={4} sm={6}>
-                    <img className="trackerbee" src={TrackerBeeImage} width="70%" height="auto" ></img>
+                <Grid item xs={4} sm={6} size="small">
+                    <img className="trackerbee" src={TrackerBeeImage} width="60vw" height="60vh" ></img>
                 </Grid>
-                <Grid item xs={0} sm={4}>
+                <Grid item xs={0} sm={4} size="small">
                     <h1>Tracker Bee</h1>
                 </Grid> 
             </Grid>
-            <div className="image" onClick={toStudentLogIn()}  >
+            </div>
+            <Link to="/studentlogin">
+            <div className="headerimage" to="/studentlogin">
                 <h4 className="">Student</h4>
-                <img className="students" src={students} width="70%" height="auto" ></img>
+                <img className="image" src={students}></img>
             </div>
-            <div className="image">
+            </Link>
+            <div className="headerimage">
                 <h4>Community Partners</h4>
-                <img className="community" src={community } width="258px" height="125px" ></img>
+                <img className="image" src={community}></img>
             </div>
-            <div className="image">
+            <div className="headerimage">
                 <h4>Admin</h4>
-                <img className="admin" src={admin1} width="90%" height="auto" ></img>
+                <img className="image" src={admin1}></img>
             </div>
         </div>
         
