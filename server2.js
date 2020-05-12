@@ -27,7 +27,7 @@ connection.connect(err=> {
     app.post('/getuser',(req,res)=>{
         console.log(req.body)
 
-        connection.query(fs.readFileSync('./sql/getUserdata.sql').toString(),[req.body.username,req.body.password],(err,resp)=>{         
+        connection.query(fs.readFileSync('./sql/getUserdata.sql').toString(),[req.body.username],(err,resp)=>{         
             if(err)
             {
             res.json(err)

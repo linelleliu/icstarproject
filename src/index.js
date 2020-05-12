@@ -24,7 +24,7 @@ ReactDOM.render(
      <Router>
       <Switch>
         <Route exact path="/" component={AdministratorStudentCommunity} />
-        <Route path='/studentlogin' component={StudentLogIn} />
+        <Route path='/studentlogin' component={Main} />
         <Route path='/register' component={StudentRegistration} />
         <Route path='/forgotpassword' component={StudentForgotPass} />
       </Switch> 

@@ -29,11 +29,15 @@ const useStyles1 = makeStyles({
   },
 });
 
-function tryToLogin() {
-    let username1=document.getElementById('eid').value
-    let password1=document.getElementById('pass').value
+function tryToLogin(func) {
+    let username1=document.getElementById('email').value
+    let password1=document.getElementById('password').value
     let data={username:username1,password:password1}
     axios.post('http://localhost:8080/getuser',data)
+    .then(resp => {
+      if (resp.data === 'correct password'){
+        func()
+      }})
 }
   
 function StudentLogIn(props) {
