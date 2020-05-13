@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 
 function StudentSurvey() {
@@ -7,7 +8,7 @@ function StudentSurvey() {
             <h3>Contractor Student Employee Evaluation</h3>
             <input id="eid" className= "mail" placeholder="Student Employee Name" type="text" />
             <input id="eid" className= "mail" placeholder="Contractor" type="text" /><br/><br/>
-            <input id="eid" className= "mail" placeholder="immediate supervisor" type="text" />
+            <input id="eid" className= "mail" placeholder="Immediate Supervisor" type="text" />
             <label className="mail">Date:</label>
             <input type="date" id="date" name="date" /><br/><br/>
     
@@ -16,8 +17,8 @@ function StudentSurvey() {
                     <td className="noborder"><h4>Category</h4></td>
                     <td className="rating"><b>Excellent</b></td>
                     <td className="rating"><b>Good</b></td>
-                    <td className="rating"><b>fair</b></td>
-                    <td className="rating"><b>poor</b></td>
+                    <td className="rating"><b>Fair</b></td>
+                    <td className="rating"><b>Poor</b></td>
                 </tr>
                 <tr>
                     <td className="rating"><b>Attendance</b></td>

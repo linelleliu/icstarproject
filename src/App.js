@@ -3,7 +3,7 @@ import TopBar from './TopBar'
 import BottomBar from './BottomBar'
 import ClockInOut from './ClockInOut';
 import TimeLog from './TimeLog'
-
+import StudentSurvey from './StudentSurvey'
 
 class App extends React.Component{
     state = {
@@ -70,7 +70,7 @@ class App extends React.Component{
     render(){
         return(
             <div>
-                <TopBar status={this.state.working} />
+                <TopBar changePage={this.changePage} status={this.state.working} />
                 {this.state.page === 0?
                 <ClockInOut 
                     clockIn={this.clockIn}
@@ -89,6 +89,9 @@ class App extends React.Component{
                     working={this.state.working}
                 />
                 : null }
+
+                {this.state.page === 'Survey' && 
+                <StudentSurvey />}
 
                 <BottomBar
                     working={this.state.working}

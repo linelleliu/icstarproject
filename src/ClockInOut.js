@@ -1,5 +1,5 @@
 import React from 'react';
-import './ClockInOut.css';
+import './index.css';
 import Button from '@material-ui/core/Button';
 
 const style = {

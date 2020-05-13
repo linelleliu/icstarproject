@@ -1,14 +1,14 @@
-.image {
-    width: 90vw;
-    height: 25vh;
-    align-content: center;
-    
-}
 
 h1 {
     text-align: right;
     color: #2196f3;
    
+}
+
+h3 {
+    text-align: left;
+    padding-left: 20px;
+    color: #2196f3;
 }
 
 h4 {
@@ -23,8 +23,32 @@ h4 {
     border: black solid 1px;
 }
 
-/* .trackerbeeheader {
-    margin-bottom: 0px;
-    border: blueviolet solid 1px;
+.image {
+    width: 90vw;
+    height: 25vh;
+    align-content: center;  
+}
+
+
+.clock {
+    text-align: center;
+}
+
+.time-display {
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 60px;
     padding-bottom: 0px;
-} */
+}
+
+.date-display {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}

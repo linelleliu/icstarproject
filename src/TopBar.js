@@ -20,6 +20,15 @@ import MailIcon from '@material-ui/icons/Mail';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import { mainListItems, secondaryListItems } from './MenuList';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import BarChartIcon from '@material-ui/icons/BarChart';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import PeopleIcon from '@material-ui/icons/People';
+import CommuteIcon from '@material-ui/icons/Commute';
+import PaymentIcon from '@material-ui/icons/Payment';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
 
 
 const useStyles1 = makeStyles({
@@ -76,18 +85,76 @@ const MenuAppBar = (props) => {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
+  const list = (anchor,func) => (
     <div
-      className={clsx(classes1.list, {
-        [classes1.fullList]: anchor === 'top' || anchor === 'bottom',
-      })}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      // className={clsx(classes1.list, {
+      //   [classes1.fullList]: anchor === 'top' || anchor === 'bottom',
+      // })}
+      // role="presentation"
+      onClick={
+        toggleDrawer(anchor, false)}
+      // onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>{mainListItems}</List>
+      <List>
+    <ListItem button onClick={() => func('Dashboard')}>
+      <ListItemIcon>
+        <DashboardIcon />
+      </ListItemIcon>
+      <ListItemText primary="Dashboard" />
+    </ListItem>
+    <ListItem button onClick={() => func('Survey')}>
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <ListItemText primary="Surveys" />
+    </ListItem>
+    <ListItem button> 
+      <ListItemIcon>
+        <BarChartIcon />
+      </ListItemIcon>
+      <ListItemText primary="Progress" />
+    </ListItem>
+    <ListItem button> 
+      <ListItemIcon>
+        <PeopleIcon />
+      </ListItemIcon>
+      <ListItemText primary="Advocacy" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <CommuteIcon />
+      </ListItemIcon>
+      <ListItemText primary="Transportation" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <PaymentIcon />
+      </ListItemIcon>
+      <ListItemText primary="Payment Log" />
+    </ListItem>
+  </List>
       <Divider />
-      <List>{secondaryListItems}</List>
+      <List><ListSubheader inset></ListSubheader>
+    <ListItem button>
+      <ListItemIcon>
+        <LocationOnIcon />
+      </ListItemIcon>
+      <ListItemText primary="Location" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <SettingsIcon />
+      </ListItemIcon>
+      <ListItemText primary="Setting" />
+    </ListItem>
+    <Divider />
+    <ListItem button>
+      <ListItemIcon>
+        <ExitToAppIcon />
+      </ListItemIcon>
+      <ListItemText primary="Log Out" />
+    </ListItem>
+    </List>
     </div>
   );
 
@@ -100,7 +167,7 @@ const MenuAppBar = (props) => {
             {['left'].map((anchor) => (
               <React.Fragment key={anchor}>
                 <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}> 
-                  {list(anchor)}
+                  {list(anchor, props.changePage)}
                 </Drawer>
                 <MenuIcon onClick={toggleDrawer(anchor, true)}/>
               </React.Fragment>
