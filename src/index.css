@@ -2,7 +2,12 @@
 h1 {
     text-align: right;
     color: #2196f3;
-   
+}
+
+h2 {
+    color: white;
+    margin: 0;
+    background-color:  #1976d2;
 }
 
 h3 {
@@ -17,6 +22,14 @@ h4 {
     color: white;
     margin-bottom: 0px;
     margin-top: 0px;
+}
+
+h5 {
+    text-align: left;
+    font-size: 15px;
+    padding-left: 25px;
+    margin: 5px;
+
 }
 
 .headerimage {
@@ -52,4 +65,45 @@ h4 {
     padding-bottom: 20px;
     font-size: 18px;
     font-weight: 400;
+}
+
+body {
+    text-align: center;
+}
+
+.email {
+    box-sizing: border-box;
+    height: 40px;
+    width: 70%;
+    padding: 10px;
+}
+
+.button {
+    box-sizing: border-box;
+    height: 40px;
+    width: 80%;
+    cursor: pointer;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 8px;
+}
+
+.linkForgot {
+    color: blue;
+    font-size: 13px;
+    text-align: right;
+}
+
+.linkRegister, .linkPrivacy, .linkLogIn {
+    color: blue;
+    font-size: 14px;
+}
+
+
+.forgotten {
+    text-align: center;
+}
+
+.registrationtile {
+    padding-top: 40px;
 }

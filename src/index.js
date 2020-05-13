@@ -21,15 +21,15 @@ import StudentEmployeeSurvey from './StudentEmployeeSurvey'
 ReactDOM.render(
 
   <React.StrictMode>
-     <Router>
+     {/* <Router>
       <Switch>
         <Route exact path="/" component={AdministratorStudentCommunity} />
         <Route path='/studentlogin' component={Main} />
         <Route path='/register' component={StudentRegistration} />
         <Route path='/forgotpassword' component={StudentForgotPass} />
       </Switch> 
-     </Router>
-    {/* <App /> */}
+     </Router> */}
+    <App />
     {/* <Workhop /> */}
       {/* <StudentSurvey /> */}
       {/* <GraduateSurvey /> */}

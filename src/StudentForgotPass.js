@@ -27,11 +27,13 @@
 import React from 'react';
 import logo from "./logo.jpg";
 import './StudentLogIn.css';
+import Container from '@material-ui/core/Container';
 
 
 function StudentForgotPass() {
    return(
       <div>
+         <Container component="main" maxWidth="xs">
          <br/>
          <br/>
          <br/>
@@ -47,6 +49,7 @@ function StudentForgotPass() {
          <button className="button" type="submit">Continue</button>
          <br/>
          <br/>
+         </Container>
       </div>
    );
   };

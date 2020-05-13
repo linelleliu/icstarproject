@@ -1,10 +1,12 @@
 import React from 'react';
 import './index.css';
+import Container from '@material-ui/core/Container';
 
 
 function StudentSurvey() {
     return (
         <div>
+            <Container component="main" maxWidth="xs">
             <h3>Contractor Student Employee Evaluation</h3>
             <input id="eid" className= "mail" placeholder="Student Employee Name" type="text" />
             <input id="eid" className= "mail" placeholder="Contractor" type="text" /><br/><br/>
@@ -114,6 +116,7 @@ function StudentSurvey() {
             </table>
             <br/>
             <button className="button" type="submit">Submit</button>
+            </Container>
         </div>
     );
 

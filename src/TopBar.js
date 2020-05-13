@@ -92,65 +92,65 @@ const MenuAppBar = (props) => {
       // onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-    <ListItem button onClick={() => func('Dashboard')}>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button onClick={() => func('Survey')}>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Surveys" />
-    </ListItem>
-    <ListItem button onClick={() => func('Progress')}> 
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Progress" />
-    </ListItem>
-    <ListItem button> 
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Advocacy" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <CommuteIcon />
-      </ListItemIcon>
-      <ListItemText primary="Transportation" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PaymentIcon />
-      </ListItemIcon>
-      <ListItemText primary="Payment Log" />
-    </ListItem>
-  </List>
-      <Divider />
-      <List><ListSubheader inset></ListSubheader>
-    <ListItem button>
-      <ListItemIcon>
-        <LocationOnIcon />
-      </ListItemIcon>
-      <ListItemText primary="Location" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <SettingsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Setting" />
-    </ListItem>
-    <Divider />
-    <ListItem button>
-      <ListItemIcon>
-        <ExitToAppIcon />
-      </ListItemIcon>
-      <ListItemText primary="Log Out" />
-    </ListItem>
-    </List>
+        <ListItem button onClick={() => func('Dashboard')}>
+          <ListItemIcon>
+            <DashboardIcon />
+          </ListItemIcon>
+          <ListItemText primary="Dashboard" />
+        </ListItem>
+        <ListItem button onClick={() => func('Survey')}>
+          <ListItemIcon>
+            <AssignmentIcon />
+          </ListItemIcon>
+          <ListItemText primary="Surveys" />
+        </ListItem>
+        <ListItem button onClick={() => func('Progress')}> 
+          <ListItemIcon>
+            <BarChartIcon />
+          </ListItemIcon>
+          <ListItemText primary="Progress" />
+        </ListItem>
+        <ListItem button button onClick={() => func('Advocacy')}> 
+          <ListItemIcon>
+            <PeopleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Advocacy" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <CommuteIcon />
+          </ListItemIcon>
+          <ListItemText primary="Transportation" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <PaymentIcon />
+          </ListItemIcon>
+          <ListItemText primary="Payment Log" />
+        </ListItem>
+      </List>
+          <Divider />
+          <List><ListSubheader inset></ListSubheader>
+        <ListItem button>
+          <ListItemIcon>
+            <LocationOnIcon />
+          </ListItemIcon>
+          <ListItemText primary="Location" />
+        </ListItem>
+        <ListItem button>
+          <ListItemIcon>
+            <SettingsIcon />
+          </ListItemIcon>
+          <ListItemText primary="Setting" />
+        </ListItem>
+        <Divider />
+        <ListItem button>
+          <ListItemIcon>
+            <ExitToAppIcon />
+          </ListItemIcon>
+          <ListItemText primary="Log Out" />
+        </ListItem>
+      </List>
     </div>
   );
 
