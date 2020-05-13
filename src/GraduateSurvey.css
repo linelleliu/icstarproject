@@ -1,13 +1,6 @@
-body {
-    text-align: center;
-}
 
 .text {
     border: 2px solid rgb(52, 52, 204);
+    padding: 20px
 }
 
-.button {
-  background-color: rgb(62, 62, 180);
-  color: white;
-  border:1px solid black;
-}

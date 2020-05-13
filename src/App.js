@@ -4,6 +4,7 @@ import BottomBar from './BottomBar'
 import ClockInOut from './ClockInOut';
 import TimeLog from './TimeLog'
 import StudentSurvey from './StudentSurvey'
+import GraduateSurvey from './GraduateSurvey'
 
 class App extends React.Component{
     state = {
@@ -92,6 +93,11 @@ class App extends React.Component{
 
                 {this.state.page === 'Survey' && 
                 <StudentSurvey />}
+
+            
+                {this.state.page === 'Progress' && 
+                <GraduateSurvey />}
+                
 
                 <BottomBar
                     working={this.state.working}

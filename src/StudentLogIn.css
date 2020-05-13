@@ -2,6 +2,12 @@ body {
     text-align: center;
 }
 
+.email {
+    box-sizing: border-box;
+    height: 40px;
+    width: 70%;
+    padding: 10px;
+}
 
 .button {
     box-sizing: border-box;

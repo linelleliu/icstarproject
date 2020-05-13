@@ -8,18 +8,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import { mainListItems, secondaryListItems } from './MenuList';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import BarChartIcon from '@material-ui/icons/BarChart';
@@ -108,7 +104,7 @@ const MenuAppBar = (props) => {
       </ListItemIcon>
       <ListItemText primary="Surveys" />
     </ListItem>
-    <ListItem button> 
+    <ListItem button onClick={() => func('Progress')}> 
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
