@@ -6,6 +6,8 @@ import TimeLog from './TimeLog'
 import StudentSurvey from './StudentSurvey'
 import GraduateSurvey from './GraduateSurvey'
 import StudentEmployeeSurvey from './StudentEmployeeSurvey';
+import JobPost from './JobPost';
+import Chat from './Chat';
 
 class App extends React.Component{
     state = {
@@ -13,7 +15,7 @@ class App extends React.Component{
         time: new Date().toLocaleTimeString(),
         date: new Date().toLocaleDateString(),
         clockIn: [],
-        clockOut:[],
+        clockOut: [],
         working: false,
     }
 
@@ -84,12 +86,20 @@ class App extends React.Component{
                 /> 
                 : null }
 
-                {this.state.page=== 1 ? 
+                {this.state.page === 1 ? 
                 <TimeLog 
                     clockIn={this.state.clockIn} 
                     clockOut={this.state.clockOut}
                     working={this.state.working}
                 />
+                : null }
+
+                {/* {this.state.page === 2 ? 
+                <Chat />
+                : null } */}
+
+                {this.state.page === 3 ? 
+                <JobPost />
                 : null }
 
                 {this.state.page === 'Survey' && 

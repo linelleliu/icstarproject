@@ -5,6 +5,7 @@ function GraduateSurvey() {
     return (
         <div className="area">
             <Container component="main" maxWidth="xs">
+                <h2>Graduate</h2>
                 <h3>Question 1</h3>
                 <textarea className="text" id="101" rows="4" cols="45" placeholder="minimum 3rows"></textarea>
                 <h3>Question 2</h3>

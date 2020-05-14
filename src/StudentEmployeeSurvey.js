@@ -24,55 +24,55 @@ function StudentEmployeeSurvey() {
                 </div>
 
                 <br/>
-                <h5 class="container">1. Working in a team structure. </h5>
+                <h5 >1. Working in a team structure. </h5>
                     <input type="checkbox"/>
-                    <label class="container">Advanced</label>
+                    <label >Advanced</label>
                     <input type="checkbox"/>
-                    <label class="container">Intermediate</label>
+                    <label >Intermediate</label>
                     <input type="checkbox"/>
-                    <label class="container">Novice</label>
+                    <label >Novice</label>
 
                 <h5>2. Decision making and problem solving. </h5>
                     <input type="checkbox"/>
-                    <label class="container">Advanced</label>
+                    <label >Advanced</label>
                     <input type="checkbox"/>
-                    <label class="container">Intermediate</label>
+                    <label >Intermediate</label>
                     <input type="checkbox"/>
-                    <label class="container">Novice</label>
+                    <label >Novice</label>
 
                 <h5>3. Demonstrating proficiency with computer software programs. </h5>
                     <input type="checkbox"/>
-                    <label class="container">Advanced</label>
+                    <label >Advanced</label>
                     <input type="checkbox"/>
-                    <label class="container">Intermediate</label>
+                    <label >Intermediate</label>
                     <input type="checkbox"/>
-                    <label class="container">Novice</label>
+                    <label >Novice</label>
 
                 
                 <h5>4. Planning, organizing, and prioritizing work. </h5>
                     <input type="checkbox"/>
-                    <label class="container">Advanced</label>
+                    <label >Advanced</label>
                     <input type="checkbox"/>
-                    <label class="container">Intermediate</label>
+                    <label >Intermediate</label>
                     <input type="checkbox"/>
-                    <label class="container">Novice</label>
+                    <label >Novice</label>
 
                 <h5>5. Obtaining and processing. </h5>
                     <input type="checkbox"/>
-                    <label class="container">Advanced</label>
+                    <label >Advanced</label>
                     <input type="checkbox"/>
-                    <label class="container">Intermediate</label>
+                    <label >Intermediate</label>
                     <input type="checkbox"/>
-                    <label class="container">Novice</label>
+                    <label >Novice</label>
                 
 
                 <h5>6. Analyzing quantitative data. </h5>
                     <input type="checkbox"/>
-                    <label class="container">Advanced</label>
+                    <label >Advanced</label>
                     <input type="checkbox"/>
-                    <label class="container">Intermediate</label>
+                    <label >Intermediate</label>
                     <input type="checkbox"/>
-                    <label class="container">Novice</label>
+                    <label >Novice</label>
             </form>
             <br/>
             <button className="button" type="submit">Submit</button>

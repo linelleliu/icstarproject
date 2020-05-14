@@ -107,3 +107,34 @@ body {
 .registrationtile {
     padding-top: 40px;
 }
+
+/* body {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 20px;
+} */
+      
+/* h2 {
+    color:rgb(55, 55, 173);
+    text-align: center;
+}
+  */
+h3 {
+    color:rgb(55, 55, 173);
+  }
+      
+.container {
+    border-color: #ccc;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+
+ }
+
+ 
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+ }
