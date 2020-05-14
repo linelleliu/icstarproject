@@ -26,7 +26,20 @@ export default function SimpleBottomNavigation(props) {
     <BottomNavigation
       value={props.page}
       onChange={(event,NewValue) => {
-        props.changePage(NewValue)
+        switch(NewValue) {
+        case 0:
+        props.changePage('Clock')
+        break;
+        case 1:
+          props.changePage('Time Log')
+          break;
+          case 2:
+            props.changePage('Live Chat')
+            break;
+            case 3:
+              props.changePage('Job')
+              break;
+        }
       }}
       showLabels
       className={classes.root}

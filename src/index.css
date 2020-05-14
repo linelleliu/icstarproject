@@ -108,6 +108,7 @@ body {
     padding-top: 40px;
 }
 
+/* Job */
 /* body {
     margin: 0 auto;
     max-width: 500px;
@@ -132,9 +133,76 @@ h3 {
 
  }
 
- 
 .container::after {
     content: "";
     clear: both;
     display: table;
  }
+
+ /* live chat */
+body {
+    margin: 0 auto;
+    max-width: 500px;
+   padding: 0 20px;
+}
+
+h2 {
+  color:rgb(55, 55, 173);
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.btn
+{
+    background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+textarea
+{
+   width: 250px;
+}
+
+
+

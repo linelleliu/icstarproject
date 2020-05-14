@@ -170,7 +170,8 @@ const MenuAppBar = (props) => {
             ))}
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            {props.status === true ? "CLOCK OUT": "CLOCK IN"}
+            {/* {props.status === true ? "CLOCK OUT": "CLOCK IN"} */}
+          {props.page}
           </Typography>
           {auth && (
             <div>

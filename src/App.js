@@ -11,7 +11,7 @@ import Chat from './Chat';
 
 class App extends React.Component{
     state = {
-        page: 0,
+        page: 'Clock',
         time: new Date().toLocaleTimeString(),
         date: new Date().toLocaleDateString(),
         clockIn: [],
@@ -74,9 +74,10 @@ class App extends React.Component{
     render(){
         return(
             <div>
-                <TopBar changePage={this.changePage} status={this.state.working} />
-                {this.state.page === 0?
+                <TopBar changePage={this.changePage} status={this.state.working} page={this.state.page} />
+                {this.state.page === 'Clock'?
                 <ClockInOut 
+                
                     clockIn={this.clockIn}
                     clockOut={this.clockOut}
                     date={this.state.date}
@@ -86,7 +87,7 @@ class App extends React.Component{
                 /> 
                 : null }
 
-                {this.state.page === 1 ? 
+                {this.state.page === 'Time Log' ? 
                 <TimeLog 
                     clockIn={this.state.clockIn} 
                     clockOut={this.state.clockOut}
@@ -94,11 +95,11 @@ class App extends React.Component{
                 />
                 : null }
 
-                {/* {this.state.page === 2 ? 
+                {this.state.page === 'Live Chat' ? 
                 <Chat />
-                : null } */}
+                : null }
 
-                {this.state.page === 3 ? 
+                {this.state.page === 'Job' ? 
                 <JobPost />
                 : null }
 
@@ -111,7 +112,7 @@ class App extends React.Component{
 
                 {this.state.page === 'Advocacy' && 
                 <StudentEmployeeSurvey />}
-                
+        
 
                 <BottomBar
                     working={this.state.working}
