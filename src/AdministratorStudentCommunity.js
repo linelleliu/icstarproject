@@ -27,19 +27,23 @@ function AdministratorStudentCommunity() {
             </Grid>
             </div>
             <Link to="/studentlogin">
-            <div className="headerimage" to="/studentlogin">
-                <h4 className="">Student</h4>
-                <img className="image" src={students}></img>
-            </div>
+                <div className="headerimage" to="/studentlogin">
+                    <h4 className="">Student</h4>
+                    <img className="image" src={students}></img>
+                </div>
             </Link>
-            <div className="headerimage">
-                <h4>Community Partners</h4>
-                <img className="image" src={community}></img>
-            </div>
-            <div className="headerimage">
-                <h4>Admin</h4>
-                <img className="image" src={admin1}></img>
-            </div>
+            <Link to="/communitypartnerlogin">
+                <div className="headerimage">
+                    <h4>Community Partners</h4>
+                    <img className="image" src={community}></img>
+                </div>
+            </Link>
+            <Link to="/adminlogin">
+                <div className="headerimage">
+                    <h4>Admin</h4>
+                    <img className="image" src={admin1}></img>
+                </div>
+            </Link>
         </div>
         
     )

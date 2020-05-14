@@ -37,7 +37,7 @@ export default function SimpleBottomNavigation(props) {
             props.changePage('Live Chat')
             break;
             case 3:
-              props.changePage('Job')
+              props.changePage('Job Posting')
               break;
         }
       }}

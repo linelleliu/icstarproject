@@ -11,7 +11,7 @@ h2 {
 }
 
 h3 {
-    text-align: left;
+    text-align: center;
     padding-left: 18px;
     color: #2196f3;
     margin: 10px;
@@ -38,7 +38,7 @@ h5 {
 }
 
 .image {
-    width: 90vw;
+    width: 82vw;
     height: 25vh;
     align-content: center;  
 }
@@ -130,7 +130,6 @@ h3 {
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
-
  }
 
 .container::after {
@@ -192,16 +191,16 @@ h2 {
   float: left;
   color: #999;
 }
-.btn
-{
+
+.btn {
     background-color: #4CAF50;
   color: white;
   border: none;
 }
 
-textarea
-{
-   width: 250px;
+textarea {
+   width: 50vh;
+   height: 10vh;
 }
 
 

@@ -49,7 +49,7 @@ function StudentLogIn(props) {
         <br/>
         <Container component="main" maxWidth="xs">
           <img className="logo" src={logo} width="340vw" height="160vh"></img>
-          <h3>Student Log In</h3>
+          <h3>Community Partners Log In</h3>
           <CssBaseline />
             <div className={classes.margin}>
               <Grid container spacing={1}>
@@ -126,6 +126,3 @@ function StudentLogIn(props) {
 };
 
 export default StudentLogIn;
-
-
-

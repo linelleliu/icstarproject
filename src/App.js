@@ -99,20 +99,22 @@ class App extends React.Component{
                 <Chat />
                 : null }
 
-                {this.state.page === 'Job' ? 
+                {this.state.page === 'Job Posting' ? 
                 <JobPost />
                 : null }
 
-                {this.state.page === 'Survey' && 
-                <StudentSurvey />}
+                {this.state.page === 'Skill Survey' && 
+                <StudentEmployeeSurvey />}
 
-            
-                {this.state.page === 'Progress' && 
+                {this.state.page === 'Graduate Survey' && 
+                <GraduateSurvey />}
+
+                {/* {this.state.page === 'Progress' && 
                 <GraduateSurvey />}
 
                 {this.state.page === 'Advocacy' && 
                 <StudentEmployeeSurvey />}
-        
+         */}
 
                 <BottomBar
                     working={this.state.working}

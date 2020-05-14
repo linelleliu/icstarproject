@@ -62,7 +62,7 @@ export default function StickyHeadTable(props) {
                         <p> {props.clockOut[index].date} {props.clockOut[index].time} </p>
                     </TableCell>
                     <TableCell>
-                        <p> {Math.round((props.clockOut[index].timeAtLogOut - item.timeAtLogIn)/1000/60/60).toFixed(2)} </p>
+                        <p> {Math.round((props.clockOut[index].timeAtLogOut - item.timeAtLogIn)/1000/60/60).toFixed(2)} Unapproved </p>
                     </TableCell>
                 </TableRow>)
               }

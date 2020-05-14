@@ -98,11 +98,17 @@ const MenuAppBar = (props) => {
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
       </ListItem>
-      <ListItem button onClick={() => func('Survey')}>
+      <ListItem button onClick={() => func('Skill Survey')}>
         <ListItemIcon>
           <AssignmentIcon />
         </ListItemIcon>
-        <ListItemText primary="Surveys" />
+        <ListItemText primary="Skill Survey" />
+      </ListItem>
+      <ListItem button onClick={() => func('Graduate Survey')}>
+        <ListItemIcon>
+          <AssignmentIcon />
+        </ListItemIcon>
+        <ListItemText primary="Graduate Survey" />
       </ListItem>
       <ListItem button onClick={() => func('Progress')}> 
         <ListItemIcon>

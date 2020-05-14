@@ -7,12 +7,9 @@ function StudentEmployeeSurvey() {
         <div>
             <Container component="main" maxWidth="xs">
             <img className="trackerbee" src={TrackerBeeImage} width="60vw" height="60vh" ></img>
-                <h2 class= "She Skills Assessment">Skills Assessment </h2>
             <br/>
-
             <form>
                 <input type="date" name="numbers" placeholder=""/>
-                <br/>
                 <br/>
                 <div>
                     <input type="text" name="name" placeholder="Employee Name"/>
@@ -25,53 +22,53 @@ function StudentEmployeeSurvey() {
 
                 <br/>
                 <h5 >1. Working in a team structure. </h5>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Advanced</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Intermediate</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Novice</label>
 
                 <h5>2. Decision making and problem solving. </h5>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Advanced</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Intermediate</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Novice</label>
 
                 <h5>3. Demonstrating proficiency with computer software programs. </h5>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Advanced</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Intermediate</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Novice</label>
 
                 
                 <h5>4. Planning, organizing, and prioritizing work. </h5>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Advanced</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Intermediate</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Novice</label>
 
                 <h5>5. Obtaining and processing. </h5>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Advanced</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Intermediate</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Novice</label>
                 
 
                 <h5>6. Analyzing quantitative data. </h5>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Advanced</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Intermediate</label>
-                    <input type="checkbox"/>
+                    <input type="radio"/>
                     <label >Novice</label>
             </form>
             <br/>
