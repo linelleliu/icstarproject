@@ -3,7 +3,7 @@ import App from './App';
 import StudentLogIn from './StudentLogIn'
 
 
-class Main extends React.Component {
+class AdminMain extends React.Component {
     state= {currentPage: 'logIn'}
 
     goToApp = () => {
@@ -12,15 +12,17 @@ class Main extends React.Component {
 
 render() {
     if (this.state.currentPage === 'logIn') {
+
     return (
-        <StudentLogIn type="Student" goToApp={this.goToApp}/>
+        <StudentLogIn type="Admin" goToApp={this.goToApp}/>
     )
     } else if (this.state.currentPage === 'App') {
-    return (
-    <App />
+   
+        return (
+        <App />
     )
     }
 }
 };
 
-export default Main;
+export default AdminMain;

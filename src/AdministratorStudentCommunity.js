@@ -32,7 +32,7 @@ function AdministratorStudentCommunity() {
                     <img className="image" src={students}></img>
                 </div>
             </Link>
-            <Link to="/communitypartnerlogin">
+            <Link to="/communitypartnerlogin" >
                 <div className="headerimage">
                     <h4>Community Partners</h4>
                     <img className="image" src={community}></img>

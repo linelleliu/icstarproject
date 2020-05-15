@@ -7,7 +7,7 @@ function Chat() {
     return (
         <div>
             <div class="container">
-                <img src={pic} alt="Avatar" width="30%"></img>
+                <img src={pic} alt="Avatar" width="10vw" height="60vh"></img>
                 <p>Hello. How are you today?</p>
                 <span class="time-right">11:00</span>
             </div>
@@ -17,7 +17,7 @@ function Chat() {
                 <span class="time-left">11:01</span>
             </div>
             <div class="container">
-                <img src={pic} alt="Avatar"  width="30%"></img>
+                <img src={pic} alt="Avatar" width="10vw" height="60vh"></img>
                 <p>Sweet! So, what do you wanna do today?</p>
                 <span class="time-right">11:02</span>
             </div>

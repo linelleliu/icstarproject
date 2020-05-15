@@ -18,6 +18,7 @@ import GraduateSurvey from './GraduateSurvey';
 import StudentEmployeeSurvey from './StudentEmployeeSurvey';
 import CommunityPartnerLogin from './CommunityPartnerLogin';
 import AdminLogin from './AdminLogin';
+import AdminMain from './AdminMain';
 
 ReactDOM.render(
 
@@ -28,8 +29,8 @@ ReactDOM.render(
         <Route path='/studentlogin' component={Main} />
         <Route path='/register' component={StudentRegistration} />
         <Route path='/forgotpassword' component={StudentForgotPass} />
-        <Route path='/communitypartnerlogin' component={AdministratorStudentCommunity} />
-        <Route path='/adminlogin' component={AdminLogin} />
+        <Route path='/communitypartnerlogin' component={CommunityPartnerLogin} />
+        <Route path='/adminlogin' component={AdminMain} />
       </Switch> 
      </Router>
     {/* <App /> */}
