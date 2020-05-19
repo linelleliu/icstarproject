@@ -8,6 +8,7 @@ import GraduateSurvey from './GraduateSurvey'
 import StudentEmployeeSurvey from './StudentEmployeeSurvey';
 import JobPost from './JobPost';
 import Chat from './Chat';
+import PaymentLog from './PaymentLog';
 
 class App extends React.Component{
     state = {
@@ -109,12 +110,12 @@ class App extends React.Component{
                 {this.state.page === 'Graduate Survey' && 
                 <GraduateSurvey />}
 
-                {/* {this.state.page === 'Progress' && 
-                <GraduateSurvey />}
+                {this.state.page === 'Payment Log' && 
+                <PaymentLog />}
 
-                {this.state.page === 'Advocacy' && 
-                <StudentEmployeeSurvey />}
-         */}
+                {/* {this.state.page === 'Advocacy' && 
+                <StudentEmployeeSurvey />} */}
+        
 
                 <BottomBar
                     working={this.state.working}

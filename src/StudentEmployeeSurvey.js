@@ -14,8 +14,8 @@ function StudentEmployeeSurvey() {
                 <div>
                     <input type="text" name="name" placeholder="Employee Name"/>
                     <input type="text" name="name" placeholder="Contractor"/>
-                    </div>
-                    <div>
+                </div>
+                <div>
                     <input type="text" name="name" placeholder="Supervisor"/>  
                     <input type="text" name="name" placeholder="Email"/>
                 </div>

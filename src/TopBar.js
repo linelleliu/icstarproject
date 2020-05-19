@@ -116,7 +116,7 @@ const MenuAppBar = (props) => {
         </ListItemIcon>
         <ListItemText primary="Progress" />
       </ListItem>
-      <ListItem button button onClick={() => func('Advocacy')}> 
+      <ListItem button onClick={() => func('Advocacy')}> 
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
@@ -128,7 +128,7 @@ const MenuAppBar = (props) => {
         </ListItemIcon>
         <ListItemText primary="Transportation" />
       </ListItem>
-      <ListItem button>
+      <ListItem button onClick={() => func('Payment Log')}>
         <ListItemIcon>
           <PaymentIcon />
         </ListItemIcon>

@@ -19,11 +19,12 @@ import StudentEmployeeSurvey from './StudentEmployeeSurvey';
 import CommunityPartnerLogin from './CommunityPartnerLogin';
 import AdminLogin from './AdminLogin';
 import AdminMain from './AdminMain';
+import PaymentLog from './PaymentLog';
 
 ReactDOM.render(
 
   <React.StrictMode>
-     <Router>
+     {/* <Router>
       <Switch>
         <Route exact path="/" component={AdministratorStudentCommunity} />
         <Route path='/studentlogin' component={Main} />
@@ -32,11 +33,11 @@ ReactDOM.render(
         <Route path='/communitypartnerlogin' component={CommunityPartnerLogin} />
         <Route path='/adminlogin' component={AdminMain} />
       </Switch> 
-     </Router>
+     </Router> */}
     {/* <App /> */}
     {/* <Workhop /> */}
       {/* <StudentSurvey /> */}
-      {/* <GraduateSurvey /> */}
+      <PaymentLog />
       {/* <StudentEmployeeSurvey /> */}
    
   </React.StrictMode>,
