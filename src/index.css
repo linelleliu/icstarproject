@@ -208,4 +208,9 @@ table, th, td {
   border-collapse: collapse;
 }
 
+.progress {
+  padding-top: 100px;
+  margin: 0px;
+  padding-bottom: 0px;
+}
 

@@ -122,7 +122,7 @@ const MenuAppBar = (props) => {
         </ListItemIcon>
         <ListItemText primary="Advocacy" />
       </ListItem>
-      <ListItem button>
+      <ListItem button onClick={() => func('Transportation')}>
         <ListItemIcon>
           <CommuteIcon />
         </ListItemIcon>
@@ -137,7 +137,7 @@ const MenuAppBar = (props) => {
     </List>
         <Divider />
         <List><ListSubheader inset></ListSubheader>
-      <ListItem button>
+      <ListItem button onClick={() => func('Location')}>
         <ListItemIcon>
           <LocationOnIcon />
         </ListItemIcon>

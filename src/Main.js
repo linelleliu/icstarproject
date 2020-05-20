@@ -12,12 +12,12 @@ class Main extends React.Component {
 
 render() {
     if (this.state.currentPage === 'logIn') {
-    return (
+        return (
         <StudentLogIn type="Student" goToApp={this.goToApp}/>
-    )
+        )
     } else if (this.state.currentPage === 'App') {
-    return (
-    <App />
+        return (
+        <App />
     )
     }
 }

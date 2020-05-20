@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+    </style>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+        <script type="text/javascript">
+            AmCharts.makeChart("chartdiv",
+                {
+                  "type": "serial",
+                  "categoryField": "category",
+                  "autoMarginOffset": 20,
+                  "marginRight": 70,
+                  "marginTop": 70,
+                  "startDuration": 1,
+                  "theme": "light",
+                  "categoryAxis": {
+                      "gridPosition": "start",
+                      "fontSize": 0,
+						"minHorizontalGap": 79,
+						"title": "Milestone",
+						"titleFontSize": 13,
+						"titleRotation": 0
+                  },
+                  "trendLines": [],
+                  "graphs": [
+                      {
+                          "balloonText": "[[title]] of [[category]]:[[value]]",
+                          "fillAlphas": 0.9,
+                          "id": "AmGraph-1",
+                          "title": "graph 1",
+                          "type": "column",
+                          "valueField": "Completed"
+                      },
+                      {
+                          "balloonText": "[[title]] of [[category]]:[[value]]",
+                          "fillAlphas": 0.9,
+                          "id": "AmGraph-2",
+                          "title": "graph 2",
+                          "type": "column",
+                          "valueField": "Needed"
+                      }
+                  ],
+                  "guides": [],
+                  "valueAxes": [
+                      {
+                          "id": "ValueAxis-1",
+                          "title": "Hours"
+                      }
+                  ],
+                  "allLabels": [],
+                  "balloon": {},
+                  "titles": [],
+                  "dataProvider": [
+                      {
+                          "category": "INTVL 1",
+                          "Completed": "38",
+                          "Needed": "38"
+                      },
+                      {
+                          "category": "INTVL 2",
+                          "Completed": "72",
+                          "Needed": "76"
+                      },
+                      {
+                          "category": "INTVL 3",
+                          "Completed": "77",
+                          "Needed": "77"
+                      },
+                      {
+                          "category": "INTVL 4",
+                          "Completed": "100",
+                          "Needed": "114"
+                      },
+                      {
+                          "category": "INTVL 5",
+                          "Completed": "114",
+                          "Needed": "115"
+                      },
+                      {
+                          "category": "INTVL 6",
+                          "Completed": "180",
+                          "Needed": "152"
+                      }
+                  ]
+              }
+          );
+        </script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+        <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+        <script type="text/javascript">
+          AmCharts.makeChart("chartdiv1",
+              {
+                  "type": "pie",
+                  "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+                  "titleField": "country",
+                  "valueField": "litres",
+                  "fontSize": 12,
+                  "theme": "light",
+                  "allLabels": [],
+                  "balloon": {},
+                  "titles": [],
+                  "dataProvider": [
+                      {
+                          "country": "Team Work",
+                          "litres": "30"
+                      },
+                      {
+                          "country": "Problem Solving",
+                          "litres": "10"
+                      },
+                      {
+                          "country": "Computer Skills",
+                          "litres": "12"
+                      },
+                      {
+                          "country": "Project Planning  Skills",
+                          "litres": "15"
+                      },
+                      {
+                          "country": "Organization Skills",
+                          "litres": "3"
+                      },
+                      {
+                          "country": "Time Management",
+                          "litres": "15"
+                      },
+                      {
+                          "country": "Analyzing Skills",
+                          "litres": "15"
+                      }
+                  ]
+              }
+          );
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse visible-xs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li>Work-log Stats</li>
+                <li>Accountability</li>
+                <li>File Folders</li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+        <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav hidden-xs">
+            <h2><img src="TrackerBeeImage.jpg" width="100" height="100"></h2>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#section1">Dashboard</a></li>
+                <li><a href="#section2">Work-log Status</a></li>
+                <li><a href="#section3">Accountability</a></li>
+                <li><a href="#section3">File Folders</a></li>
+            </ul><br>
+            </div>
+            <br>
+            <div class="col-sm-9">
+            <div class="well">
+                <h4>Good Morning!</h4>
+                <p>Stats are Live</p>
+                <grid>
+                    <grid>
+                        <div id="chartdiv" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+                    </grid>
+                    <grid>
+                        <div id="chartdiv1" style="width: 100%; height: 400px; background-color: #FFFFFF;" ></div>
+                    </grid>
+                </grid>   
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                <div class="well">
+                    <h4>School Code</h4>
+                    <p>Intern Stats</p> 
+                </div>
+                </div>
+                <div class="col-sm-3">
+                <div class="well">
+                    <h4>Time Logs</h4>
+                    <p>Approved vs Pending</p> 
+                </div>
+                </div>
+                <div class="col-sm-3">
+                <div class="well">
+                    <h4>Accountability</h4>
+                    <p>Hours-Completed vs. Hours-Needed</p> 
+                </div>
+                </div>
+                <div class="col-sm-3">
+                <div class="well">
+                    <h4>Interval Completion</h4>
+                    <p>69%</p> 
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                <div class="well">
+                    <p>School Contact</p> 
+                    <p>Company Contact</p> 
+                    <p>Mentor Contact</p> 
+                </div>
+                </div>
+                <div class="col-sm-4">
+                <div class="well">
+                    <p>Company </p> 
+                    <p>School</p> 
+                    <p>Intern</p> 
+                </div>
+                </div>
+                <div class="col-sm-4">
+                <div class="well">
+                    <p>Surveys</p> 
+                    <p>Messages</p> 
+                    <p>Material</p> 
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>
+

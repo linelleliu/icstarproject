@@ -24,7 +24,7 @@ import PaymentLog from './PaymentLog';
 ReactDOM.render(
 
   <React.StrictMode>
-     {/* <Router>
+     <Router>
       <Switch>
         <Route exact path="/" component={AdministratorStudentCommunity} />
         <Route path='/studentlogin' component={Main} />
@@ -33,11 +33,11 @@ ReactDOM.render(
         <Route path='/communitypartnerlogin' component={CommunityPartnerLogin} />
         <Route path='/adminlogin' component={AdminMain} />
       </Switch> 
-     </Router> */}
+     </Router>
     {/* <App /> */}
     {/* <Workhop /> */}
       {/* <StudentSurvey /> */}
-      <PaymentLog />
+      {/* <PaymentLog /> */}
       {/* <StudentEmployeeSurvey /> */}
    
   </React.StrictMode>,

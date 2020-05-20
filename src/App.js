@@ -4,11 +4,14 @@ import BottomBar from './BottomBar'
 import ClockInOut from './ClockInOut';
 import TimeLog from './TimeLog'
 import StudentSurvey from './StudentSurvey'
-import GraduateSurvey from './GraduateSurvey'
+import GraduateSurvey from './GraduateSurvey';
 import StudentEmployeeSurvey from './StudentEmployeeSurvey';
 import JobPost from './JobPost';
 import Chat from './Chat';
 import PaymentLog from './PaymentLog';
+import Progress from './Progress';
+import Transportation  from './Transportation';
+import Location from './Location';
 
 class App extends React.Component{
     state = {
@@ -110,12 +113,18 @@ class App extends React.Component{
                 {this.state.page === 'Graduate Survey' && 
                 <GraduateSurvey />}
 
+                {this.state.page === 'Progress' && 
+                <Progress />}
+
+                {this.state.page === 'Transportation' && 
+                <Transportation  />}
+
                 {this.state.page === 'Payment Log' && 
                 <PaymentLog />}
 
-                {/* {this.state.page === 'Advocacy' && 
-                <StudentEmployeeSurvey />} */}
-        
+                {this.state.page === 'Location' && 
+                <Location />}
+
 
                 <BottomBar
                     working={this.state.working}
