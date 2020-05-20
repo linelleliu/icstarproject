@@ -143,7 +143,7 @@ const MenuAppBar = (props) => {
         </ListItemIcon>
         <ListItemText primary="Location" />
       </ListItem>
-      <ListItem button>
+      <ListItem button onClick={() => func('Setting')}>
         <ListItemIcon>
           <SettingsIcon />
         </ListItemIcon>

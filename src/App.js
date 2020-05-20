@@ -12,6 +12,7 @@ import PaymentLog from './PaymentLog';
 import Progress from './Progress';
 import Transportation  from './Transportation';
 import Location from './Location';
+import Setting from './Setting'
 
 class App extends React.Component{
     state = {
@@ -125,6 +126,8 @@ class App extends React.Component{
                 {this.state.page === 'Location' && 
                 <Location />}
 
+                {this.state.page === 'Setting' && 
+                <Setting />}
 
                 <BottomBar
                     working={this.state.working}
