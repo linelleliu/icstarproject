@@ -24,6 +24,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import CommuteIcon from '@material-ui/icons/Commute';
 import PaymentIcon from '@material-ui/icons/Payment';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import HelpIcon from '@material-ui/icons/Help';
 
 
 
@@ -116,6 +117,12 @@ const MenuAppBar = (props) => {
         </ListItemIcon>
         <ListItemText primary="Progress" />
       </ListItem>
+      <ListItem button onClick={() => func('Payment Log')}>
+        <ListItemIcon>
+          <PaymentIcon />
+        </ListItemIcon>
+        <ListItemText primary="Payment Log" />
+      </ListItem>
       <ListItem button onClick={() => func('Advocacy')}> 
         <ListItemIcon>
           <PeopleIcon />
@@ -128,12 +135,7 @@ const MenuAppBar = (props) => {
         </ListItemIcon>
         <ListItemText primary="Transportation" />
       </ListItem>
-      <ListItem button onClick={() => func('Payment Log')}>
-        <ListItemIcon>
-          <PaymentIcon />
-        </ListItemIcon>
-        <ListItemText primary="Payment Log" />
-      </ListItem>
+    
     </List>
         <Divider />
         <List><ListSubheader inset></ListSubheader>
@@ -148,6 +150,12 @@ const MenuAppBar = (props) => {
           <SettingsIcon />
         </ListItemIcon>
         <ListItemText primary="Setting" />
+      </ListItem>
+      <ListItem button onClick={() => func('Help')}>
+        <ListItemIcon>
+          <HelpIcon />
+        </ListItemIcon>
+        <ListItemText primary="Help" />
       </ListItem>
       <Divider />
       <ListItem button>
