@@ -3,7 +3,6 @@ import TopBar from './TopBar'
 import BottomBar from './BottomBar'
 import ClockInOut from './ClockInOut';
 import TimeLog from './TimeLog'
-import StudentSurvey from './StudentSurvey'
 import GraduateSurvey from './GraduateSurvey';
 import StudentEmployeeSurvey from './StudentEmployeeSurvey';
 import JobPost from './JobPost';

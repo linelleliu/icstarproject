@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StudentSurvey.css">   
+    <title>Evaluation</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */ 
+      .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+       
+      }
+      
+      /* Add a gray background color and some padding to the footer */
+      footer {
+        background-color: #f2f2f2;
+        padding: 25px;
+      }
+      
+    .carousel-inner img {
+        width: 100%; /* Set width to 100% */
+        margin: auto;
+        min-height:200px;
+    }
+  
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Community Partners</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li ><a href="CommunityParntersDashboard.html">Dashboard</a></li>
+              <li><a href="#">Live Chat</a></li>
+              <li class="active"><a href="StudentSurvey.html">Evaluation</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    <h3 style="color: white;">Contractor Student Employee Evaluation</h3>
+    <input id="eid" class= mail placeholder="Student Employee Name" type="text"/>
+    <input id="eid" class= mail placeholder="Contractor" type="text"/><br><br>
+    <input id="eid" class= mail placeholder="Immediate Supervisor" type="text"/>
+    <label class=mail >Date:</label>
+<input type="date" id="date" name="date"><br><br>
+    
+<table style="width:100%" >
+  <tr>
+    <td class = noborder style="color: white;"><h4>Category</h4></td>
+    <td  class=rating><b>Excellent</b></td>
+    <td class=rating><b>Good</b></td>
+    <td class=rating><b>Fair</b></td>
+    <td class=rating><b>Poor</b></td>
+
+
+
+  </tr>
+    <tr>
+      <td  class=rating><b>Attendance</b></td>
+      <td><input type="radio" name="radQ3" value="7" id="q7"  title="Excellent" /></td>
+      <td><input type="radio" name="radQ3" value="7" id="q8"  title="Good" /></td>
+      <td><input type="radio" name="radQ3" value="7" id="q9"  title="Fair" /></td>
+     <td><input type="radio" name="radQ3" value="7" id="q1"  title="Poor" /></td>
+      
+    </tr>
+    <tr>
+      <td  class=rating><b>Attitude</b></td>
+      <td><input type="radio" name="radQ4" value="7" id="q2"  title="Excellent" /></td>
+      <td><input type="radio" name="radQ4" value="7" id="q3"  title="Good" /></td>
+      <td><input type="radio" name="radQ4" value="7" id="q4"  title="Fair" /></td>
+     <td><input type="radio" name="radQ4" value="7" id="q5"  title="Poor" /></td>
+    </tr>
+    <tr>
+      <td class=rating><b>Communication</b></td>
+      <td><input  type="radio" name="radQ5" value="7" id="q6"  title="Excellent" /></td>
+      <td><input type="radio" name="radQ6" value="7" id="p1"  title="Good" /></td>
+      <td><input  type="radio" name="radQ7" value="7" id="p2"  title="Fair" /></td>
+     <td><input  type="radio" name="radQ8" value="7" id="p3"  title="Poor" /></td>
+    </tr>
+    <tr>
+      <td class=rating ><b>Cooperation</b></td>
+      <td><input type="radio" name="radQ" value="7" id="p4"   /></td>
+      <td><input type="radio" name="radQ" value="7" id="p5"  /></td>
+      <td><input type="radio" name="radQ" value="7" id="p6"  /></td>
+     <td><input type="radio" name="radQ" value="7" id="p7"   /></td>
+    </tr>
+    <tr>
+        <td class=rating><b>Creativity</b></td>
+        <td><input type="radio" name="rad3" value="7" id="p8"  title="Good" /></td>
+        <td><input type="radio" name="rad3" value="7" id="p9"  title="Good" /></td>
+        <td><input type="radio" name="rad3" value="7" id="k1"  title="Good" /></td>
+       <td><input type="radio" name="rad3" value="7" id="k2"  title="Good" /></td>
+      </tr>
+      <tr>
+        <td class=rating><b>Dependability</b></td>
+        <td><input type="radio" name="raQ3" value="7" id="k3"  title="Good" /></td>
+        <td><input type="radio" name="raQ3" value="7" id="k4"  title="Good" /></td>
+        <td><input type="radio" name="raQ3" value="7" id="k5"  title="Good" /></td>
+       <td><input type="radio" name="raQ3" value="7" id="k6"  title="Good" /></td>
+      </tr>
+      
+      <tr>
+        <td class=rating><b>Intiative</b></td>
+        <td><input type="radio" name="rdQ3" value="7" id="k7"  title="Good" /></td>
+        <td><input type="radio" name="rdQ3" value="7" id="k8"  title="Good" /></td>
+        <td><input type="radio" name="rdQ3" value="7" id="k9"  title="Good" /></td>
+       <td><input type="radio" name="rdQ3" value="7" id="k0"  title="Good" /></td>
+      </tr>
+      <tr>
+        <td class=rating><b>Productivity</b></td>
+        <td><input type="radio" name="adQ3" value="7" id="s1"  title="Good" /></td>
+        <td><input type="radio" name="adQ3" value="7" id="s2"  title="Good" /></td>
+        <td><input type="radio" name="adQ3" value="7" id="s3"  title="Good" /></td>
+       <td><input type="radio" name="adQ3" value="7" id="s4"  title="Good" /></td>
+      </tr>
+      <tr>
+        <td class=rating><b>Punctuality</b></td>
+        <td><input type="radio" name="radQ31" value="7" id="s5"  title="Good" /></td>
+        <td><input type="radio" name="radQ31" value="7" id="s6"  title="Good" /></td>
+        <td><input type="radio" name="radQ31" value="7" id="s7"  title="Good" /></td>
+       <td><input type="radio" name="radQ31" value="7" id="s8"  title="Good" /></td>
+      </tr>
+      <tr>
+        <td class=rating><b>Technical Skills</b></td>
+        <td><input type="radio" name="ra1Q3" value="7" id="a1"  title="Good" /></td>
+        <td><input type="radio" name="ra1Q3" value="7" id="a2"  title="Good" /></td>
+        <td><input type="radio" name="ra1Q3" value="7" id="a3"  title="Good" /></td>
+       <td><input type="radio" name="ra1Q3" value="7" id="a4"  title="Good" /></td>
+      </tr>
+      <tr>
+        <td class=rating><b>Work Consistency</b></td>
+        <td><input type="radio" name="r1dQ3" value="7" id="a5"  title="Good" /></td>
+        <td><input type="radio" name="r1dQ3" value="7" id="a6"  title="Good" /></td>
+        <td><input type="radio" name="r1dQ3" value="7" id="a7"  title="Good" /></td>
+       <td><input type="radio" name="r1dQ3" value="7" id="a8"  title="Good" /></td>
+      </tr> 
+      <tr>
+        <td class=rating><b>Work Quality</b></td>
+        <td><input type="radio" name="1adQ3" value="7" id="r1"  title="Good" /></td>
+        <td><input type="radio" name="1adQ3" value="7" id="r2"  title="Good" /></td>
+        <td><input type="radio" name="1adQ3" value="7" id="qr3"  title="Good" /></td>
+       <td><input type="radio" name="1adQ3" value="7" id="r4"  title="Good" /></td>
+      </tr>
+      <tr>
+        <td class=rating><b>Working Relations</b></td>
+        <td><input type="radio" name="rad13" value="7" id="r5"  title="Good" /></td>
+        <td><input type="radio" name="rad13" value="7" id="r6"  title="Good" /></td>
+        <td><input type="radio" name="rad13" value="7" id="r7"  title="Good" /></td>
+       <td><input type="radio" name="rad13" value="7" id="r8"  title="Good" /></td>
+      </tr>
+     
+           
+  </table><br>
+  <button class=button type="submit">Submit</button>
+</body>
+
+</html>
+

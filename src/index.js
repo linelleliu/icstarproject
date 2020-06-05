@@ -12,7 +12,6 @@ import {
 import StudentRegistration from './StudentRegistration';
 import WorkShop from './WorkShop';
 import StudentForgotPass from './StudentForgotPass';
-import StudentSurvey from './StudentSurvey';
 import AdministratorStudentCommunity from './AdministratorStudentCommunity';
 import GraduateSurvey from './GraduateSurvey';
 import StudentEmployeeSurvey from './StudentEmployeeSurvey';
@@ -36,7 +35,7 @@ ReactDOM.render(
      </Router>
     {/* <App /> */}
     {/* <Workhop /> */}
-      {/* <StudentSurvey /> */}
+
       {/* <PaymentLog /> */}
       {/* <StudentEmployeeSurvey /> */}
      

@@ -1,3 +1,3 @@
-INSERT INTO mpsapp.users(`email`, `FName`, `LName`, `companyName`, `role`)VALUES(?, ?, ?, ?, ?);
+INSERT INTO `school`.`login`(`username`, `password`)VALUES('student@mps.com', 'student');
 
 
