@@ -11,7 +11,7 @@ app.use(cors())
 app.listen(8080)
 
 const connection = mysql.createConnection({
-    host: "aa18hthcaue5zg.cbzmg30jppts.us-east-2.rds.amazonaws.com",
+    host: "us-east-2.rds.amazonaws.com",
     user: "username",
     password: "password",
     port: 3306
